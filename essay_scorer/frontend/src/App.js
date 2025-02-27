@@ -1,42 +1,48 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
-
-// 模拟考试数据
-const EXAMS = [
-  {
-    id: 1,
-    name: '2023年高考模拟考试',
-    questions: [
-      { id: 1, prompt: '写一篇关于环保的议论文', requirement: '不少于800字，结构清晰，论点明确' },
-      { id: 2, prompt: '描述你最喜欢的季节', requirement: '使用生动的描写，不少于600字' }
-    ]
-  },
-  {
-    id: 2,
-    name: '2024年中考模拟考试',
-    questions: [
-      { id: 3, prompt: '我的理想', requirement: '内容具体，感情真挚，500字以上' }
-    ]
-  }
-];
 
 function App() {
   const [essay, setEssay] = useState('');
   const [result, setResult] = useState('');
   const [loading, setLoading] = useState(false);
+  const [exams, setExams] = useState([]);
   const [selectedExamId, setSelectedExamId] = useState('');
   const [selectedQuestionId, setSelectedQuestionId] = useState('');
   const [currentQuestion, setCurrentQuestion] = useState(null);
+  const [showFullScheme, setShowFullScheme] = useState(false);
+  const [loadingExams, setLoadingExams] = useState(true);
+  const [error, setError] = useState(null);
 
-  // 获取当前选择的考试
-  const selectedExam = EXAMS.find(exam => exam.id === Number(selectedExamId));
-  
+  // 加载考试数据
+  useEffect(() => {
+    const fetchExams = async () => {
+      try {
+        const response = await axios.get('http://localhost:3001/api/exams');
+        const formatted = response.data.map(exam => ({
+          ...exam,
+          questions: exam.questions.map(q => ({
+            ...q,
+            prompt: q.question,
+            requirement: q.mark_scheme.split('\n').slice(0, 3).join('\n'),
+            fullMarkScheme: q.mark_scheme
+          }))
+        }));
+        setExams(formatted);
+      } catch (err) {
+        setError('无法加载考试数据，请检查网络连接后重试');
+      } finally {
+        setLoadingExams(false);
+      }
+    };
+    fetchExams();
+  }, []);
+
   // 处理考试选择
   const handleExamChange = (e) => {
     const examId = e.target.value;
     setSelectedExamId(examId);
-    setSelectedQuestionId(''); // 重置题目选择
+    setSelectedQuestionId('');
     setCurrentQuestion(null);
   };
 
@@ -44,7 +50,8 @@ function App() {
   const handleQuestionChange = (e) => {
     const questionId = e.target.value;
     setSelectedQuestionId(questionId);
-    const question = selectedExam?.questions.find(q => q.id === Number(questionId));
+    const selectedExam = exams.find(exam => exam.id === selectedExamId);
+    const question = selectedExam?.questions.find(q => q.id === questionId);
     setCurrentQuestion(question || null);
   };
 
@@ -59,8 +66,10 @@ function App() {
     try {
       const response = await axios.post('http://localhost:3001/api/grade', {
         essay: essay,
-        questionPrompt: currentQuestion.prompt,
-        questionRequirement: currentQuestion.requirement
+        examId: selectedExamId,
+        questionId: selectedQuestionId,
+        questionPrompt: currentQuestion.question,
+        questionRequirement: currentQuestion.fullMarkScheme
       });
       
       setResult(response.data);
@@ -73,48 +82,69 @@ function App() {
 
   return (
     <div className="container">
-      <h1>智能作文评分系统</h1>
+      <h1>经济学论文智能评分系统</h1>
+      
+      {error && <div className="error-banner">{error}</div>}
       
       <div className="selection-container">
-        <select 
-          value={selectedExamId} 
-          onChange={handleExamChange}
-          className="exam-selector"
-        >
-          <option value="">请选择考试场次</option>
-          {EXAMS.map(exam => (
-            <option key={exam.id} value={exam.id}>{exam.name}</option>
-          ))}
-        </select>
+        {loadingExams ? (
+          <div className="loader">正在加载考试数据...</div>
+        ) : (
+          <>
+            <select
+              value={selectedExamId}
+              onChange={handleExamChange}
+              className="exam-selector"
+            >
+              <option value="">请选择考试场次</option>
+              {exams.map(exam => (
+                <option key={exam.id} value={exam.id}>{exam.name}</option>
+              ))}
+            </select>
 
-        <select
-          value={selectedQuestionId}
-          onChange={handleQuestionChange}
-          disabled={!selectedExamId}
-          className="question-selector"
-        >
-          <option value="">请选择题目</option>
-          {selectedExam?.questions.map(question => (
-            <option key={question.id} value={question.id}>
-              {question.prompt}
-            </option>
-          ))}
-        </select>
+            <select
+              value={selectedQuestionId}
+              onChange={handleQuestionChange}
+              disabled={!selectedExamId}
+              className="question-selector"
+            >
+              <option value="">请选择题目</option>
+              {exams.find(exam => exam.id === selectedExamId)?.questions.map(question => (
+                <option key={question.id} value={question.id}>
+                  {question.id} - {question.prompt.substring(0, 50)}...
+                </option>
+              ))}
+            </select>
+          </>
+        )}
       </div>
 
       {currentQuestion && (
         <div className="question-info">
-          <h3>题目要求</h3>
+          <h3>题目要求（{currentQuestion.id}）</h3>
           <p className="prompt">{currentQuestion.prompt}</p>
-          <p className="requirement">具体要求：{currentQuestion.requirement}</p>
+          <div className="requirement-box">
+            <p>总分：{currentQuestion.total_marks} 分</p>
+            <button 
+              onClick={() => setShowFullScheme(!showFullScheme)}
+              className="toggle-btn"
+            >
+              {showFullScheme ? '收起完整评分标准' : '展开完整评分标准'}
+            </button>
+            {showFullScheme && (
+              <pre className="full-mark-scheme">
+                {currentQuestion.fullMarkScheme}
+              </pre>
+            )}
+          </div>
         </div>
       )}
 
       <textarea
         value={essay}
         onChange={(e) => setEssay(e.target.value)}
-        rows="10"
-        placeholder="在此输入你的作文..."
+        rows="12"
+        placeholder="在此输入您的经济学论文..."
         disabled={!currentQuestion}
       />
       
@@ -123,7 +153,7 @@ function App() {
         disabled={loading || !currentQuestion}
         className="submit-btn"
       >
-        {loading ? '评分中...' : '提交作文'}
+        {loading ? '评分中...' : '提交评分'}
       </button>
       
       {result && (
