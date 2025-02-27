@@ -1,0 +1,29 @@
+/essay_scorer/papers/
+
+/essay_scorer/backend/venv
+/essay_scorer/backend/.env
+
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+essay_scorer/frontend/node_modules
+essay_scorer/frontend/.pnp
+essay_scorer/frontend.pnp.js
+
+# testing
+essay_scorer/frontend/coverage
+
+# production
+essay_scorer/frontend/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
