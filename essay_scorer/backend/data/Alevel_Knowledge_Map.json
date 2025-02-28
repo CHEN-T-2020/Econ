@@ -1,0 +1,781 @@
+[
+    {
+        "id": "7",
+        "description": "The price system and the microeconomy (A Level)",
+        "main_topics": [
+            {
+                "id": "7.1",
+                "description": "Utility",
+                "sub_topics": [
+                    {
+                        "id": "7.1.1",
+                        "description": "Definition and calculation of total utility and marginal utility",
+                        "explanation": "Utility measures the satisfaction or benefit derived from consuming goods and services."
+                    },
+                    {
+                        "id": "7.1.2",
+                        "description": "Diminishing marginal utility",
+                        "explanation": "Diminishing marginal utility states that as consumption increases, the additional satisfaction from each extra unit decreases."
+                    },
+                    {
+                        "id": "7.1.3",
+                        "description": "Equi-marginal principle",
+                        "explanation": "The equi-marginal principle suggests that consumers maximize utility by allocating their budget so that the marginal utility per unit of currency is equal across all goods."
+                    },
+                    {
+                        "id": "7.1.4",
+                        "description": "Derivation of an individual demand curve",
+                        "explanation": "The individual demand curve is derived from the consumer’s utility-maximizing choices as prices change."
+                    },
+                    {
+                        "id": "7.1.5",
+                        "description": "Limitations of marginal utility theory and its assumptions of rational behaviour",
+                        "explanation": "Marginal utility theory assumes rational behavior but has limitations due to behavioral factors, external influences, and subjective preferences."
+                    }
+                ]
+            },
+            {
+                "id": "7.2",
+                "description": "Indifference curves and budget lines",
+                "sub_topics": [
+                    {
+                        "id": "7.2.1",
+                        "description": "Meaning of an indifference curve and a budget line",
+                        "explanation": "An indifference curve represents combinations of two goods that provide the same level of satisfaction, while a budget line shows combinations that a consumer can afford."
+                    },
+                    {
+                        "id": "7.2.2",
+                        "description": "Causes of a shift in the budget line",
+                        "explanation": "A shift in the budget line occurs due to changes in income or price of goods, altering affordability."
+                    },
+                    {
+                        "id": "7.2.3",
+                        "description": "Income, substitution and price effects for normal, inferior and Giffen goods",
+                        "explanation": "Price effects include income and substitution effects; for normal goods, a price fall increases consumption due to higher real income and substitution away from alternatives."
+                    },
+                    {
+                        "id": "7.2.4",
+                        "description": "Limitations of the model of indifference curves",
+                        "explanation": "The indifference curve model assumes rationality but has limitations, such as ignoring real-world complexities like habit formation and bounded rationality."
+                    }
+                ]
+            },
+            {
+                "id": "7.3",
+                "description": "Efficiency and market failure",
+                "sub_topics": [
+                    {
+                        "id": "7.3.1",
+                        "description": "Definitions of productive efficiency and allocative efficiency",
+                        "explanation": "Productive efficiency occurs when goods are produced at the lowest possible cost, while allocative efficiency occurs when resources are distributed to maximize societal welfare."
+                    },
+                    {
+                        "id": "7.3.2",
+                        "description": "Conditions for productive efficiency and allocative efficiency",
+                        "explanation": "For productive and allocative efficiency, firms should produce at minimum cost and allocate resources where they provide the most utility."
+                    },
+                    {
+                        "id": "7.3.3",
+                        "description": "Pareto optimality",
+                        "explanation": "Pareto optimality occurs when no one can be made better off without making someone else worse off, a key concept in welfare economics."
+                    },
+                    {
+                        "id": "7.3.4",
+                        "description": "Definition of dynamic efficiency",
+                        "explanation": "Dynamic efficiency refers to improvements in productivity and technology over time, which enhances long-term growth."
+                    },
+                    {
+                        "id": "7.3.5",
+                        "description": "Definition of market failure",
+                        "explanation": "Market failure occurs when resource allocation leads to inefficiency, causing negative externalities, under-provision of public goods, or monopolistic distortions."
+                    },
+                    {
+                        "id": "7.3.6",
+                        "description": "Reasons for market failure",
+                        "explanation": "Market failure can arise due to externalities, information asymmetry, and lack of competition, requiring government intervention."
+                    }
+                ]
+            },
+            {
+                "id": "7.4",
+                "description": "Private costs and benefits, externalities and social costs and benefits",
+                "sub_topics": [
+                    {
+                        "id": "7.4.1",
+                        "description": "Definition and calculation of social costs (SC) as the sum of private costs (PC) and external costs (EC), including marginal social costs (MSC), marginal private costs (MPC) and marginal external costs (MEC)",
+                        "explanation": "Social costs include private and external costs, such as pollution affecting third parties."
+                    },
+                    {
+                        "id": "7.4.2",
+                        "description": "Definition and calculation of social benefits (SB) as the sum of private benefits (PB) and external benefits (EB), including marginal social benefits (MSB), marginal private benefits (MPB) and marginal external benefits (MEB)",
+                        "explanation": "Social benefits include private and external benefits, such as vaccinations reducing disease spread."
+                    },
+                    {
+                        "id": "7.4.3",
+                        "description": "Definition of positive externality and negative externality",
+                        "explanation": "Positive externalities occur when third parties benefit from a transaction, while negative externalities occur when third parties bear a cost."
+                    },
+                    {
+                        "id": "7.4.4",
+                        "description": "Positive and negative externalities of both consumption and production",
+                        "explanation": "Externalities in consumption and production can lead to market failure, justifying government intervention through taxes or subsidies."
+                    },
+                    {
+                        "id": "7.4.5",
+                        "description": "Deadweight welfare losses arising from positive and negative externalities",
+                        "explanation": "Deadweight welfare loss arises when markets fail to allocate resources efficiently, often due to externalities or imperfect competition."
+                    },
+                    {
+                        "id": "7.4.6",
+                        "description": "Asymmetric information and moral hazard",
+                        "explanation": "Asymmetric information occurs when one party has more knowledge than another, leading to adverse selection or moral hazard."
+                    },
+                    {
+                        "id": "7.4.7",
+                        "description": "Use of costs and benefits in analysing decisions (knowledge of net present value is not required)",
+                        "explanation": "Cost-benefit analysis helps in decision-making by weighing social costs and benefits, though challenges exist in measuring non-monetary factors."
+                    }
+                ]
+            },
+            {
+                "id": "7.5",
+                "description": "Types of cost, revenue and profit, short-run and long-run production",
+                "sub_topics": [
+                    {
+                        "id": "7.5.1",
+                        "description": "Short-run production function: fixed and variable factors of production, definition and calculation of total product, average product and marginal product, law of diminishing returns (law of variable proportions)",
+                        "explanation": "Fixed factors can't be easily changed in the short - term, like factory buildings. Variable factors can be adjusted, such as labor. Total product (TP) is the total output produced. Average product (AP) is TP divided by the amount of variable input. Marginal product (MP) is the additional output from adding one more unit of variable input. The law of diminishing returns states that as more variable input is added, MP will eventually decline."
+                    },
+                    {
+                        "id": "7.5.2",
+                        "description": "Short-run cost function: definition and calculation of fixed costs (FC) and variable costs (VC), definition and calculation of total, average and marginal costs (TC, AC, MC), including average total cost (ATC), total and average fixed costs (TFC, AFC) and total and average variable costs (TVC, AVC), explanation of shape of short-run average cost and marginal cost curves",
+                        "explanation": "Fixed costs (FC) don't change with output, like rent. Variable costs (VC) change with output, such as raw material costs. Total cost (TC)=FC + VC. Average total cost (ATC)=TC/output. Average fixed cost (AFC)=FC/output and it decreases as output rises. Average variable cost (AVC)=VC/output. Marginal cost (MC) is the change in TC from producing one more unit. AVC and ATC curves are U - shaped, and MC intersects them at their lowest points."
+                    },
+                    {
+                        "id": "7.5.3",
+                        "description": "Long-run production function: no fixed factors of production, returns to scale",
+                        "explanation": "There are no fixed factors in the long - run. All factors are variable. Returns to scale: when all inputs increase proportionally, if output increases more, it's increasing returns; if the same, it's constant returns; if less, it's decreasing returns."
+                    },
+                    {
+                        "id": "7.5.4",
+                        "description": "Long-run cost function: explanation of shape of long-run average cost curve, concept of minimum efficient scale",
+                        "explanation": "The long - run average cost (LRAC) curve is usually U - shaped. It first falls due to economies of scale, then may be flat at constant returns, and rises due to diseconomies. The minimum efficient scale is the output level where LRAC is minimized."
+                    },
+                    {
+                        "id": "7.5.5",
+                        "description": "Relationship between economies of scale and decreasing average costs",
+                        "explanation": "Economies of scale cause average costs to decrease as output increases, due to factors like specialization and better technology use."
+                    },
+                    {
+                        "id": "7.5.6",
+                        "description": "Internal and external economies of scale",
+                        "explanation": "Internal economies result from a firm's own growth, like more efficient resource use. External economies come from industry - wide development, such as better infrastructure in an industrial cluster."
+                    },
+                    {
+                        "id": "7.5.7",
+                        "description": "Internal and external diseconomies of scale",
+                        "explanation": "Internal diseconomies occur when a firm gets too large, causing higher costs, like management inefficiencies. External diseconomies are due to industry over - expansion, for example, rising raw material prices."
+                    },
+                    {
+                        "id": "7.5.8",
+                        "description": "Definition and calculation of revenue: total, average and marginal revenue (TR, AR, MR)",
+                        "explanation": "Total revenue (TR) is the price times the quantity sold. Average revenue (AR)=TR/quantity, and in perfect competition, AR = price. Marginal revenue (MR) is the change in TR from selling one more unit."
+                    },
+                    {
+                        "id": "7.5.9",
+                        "description": "Definition of normal, subnormal and supernormal profit",
+                        "explanation": "Normal profit is the minimum profit to keep a firm in business, covering all costs. Subnormal profit means total revenue is less than total cost. Supernormal profit is when total revenue exceeds total cost (including normal profit)."
+                    },
+                    {
+                        "id": "7.5.10",
+                        "description": "Calculation of supernormal and subnormal profit",
+                        "explanation": "Supernormal profit = TR - TC (when TR>TC). Subnormal profit = TR - TC (when TR<TC)."
+                    }
+                ]
+            },
+            {
+                "id": "7.6",
+                "description": "Different market structures",
+                "sub_topics": [
+                    {
+                        "id": "7.6.1",
+                        "description": "Perfect competition and imperfect competition: monopoly, monopolistic competition, oligopoly, natural monopoly",
+                        "explanation": "Perfect competition includes a market structure with numerous buyers and sellers, homogeneous products, free entry and exit, and full information availability. Imperfect competition encompasses monopoly (a single - seller market with high entry barriers and no close substitutes), monopolistic competition (many firms with differentiated products and easy entry/exit), oligopoly (a few large firms dominating the market with high entry barriers and products that can be either homogeneous or differentiated), and natural monopoly (a single firm can supply the entire market at a lower cost due to economies of scale)."
+                    },
+                    {
+                        "id": "7.6.2",
+                        "description": "Structure of the listed markets as explained by number of buyers and sellers, product differentiation, degree of freedom of entry and availability of information",
+                        "explanation": "Perfect competition: Many buyers & sellers, identical products, free entry/exit, and full information. Monopoly: One seller, no close substitutes, high entry barriers. Monopolistic competition: Many firms, differentiated products, easy entry/exit. Oligopoly: A few large firms, products can be homogeneous or differentiated, high entry barriers. Natural monopoly: A single firm can serve the whole market at a lower cost due to economies of scale."
+                    },
+                    {
+                        "id": "7.6.3",
+                        "description": "Barriers to entry and exit: legal barriers, market barriers, cost barriers, physical barriers",
+                        "explanation": "Legal barriers: Laws like patents & licenses. Market barriers: Brand loyalty, high advertising costs. Cost barriers: Economies of scale, high R&D costs. Physical barriers: Limited resource access, geographic isolation."
+                    },
+                    {
+                        "id": "7.6.4",
+                        "description": "Performance of firms in different market structures: revenues and revenue curves, output in the short run and the long run, profits in the short run and the long run, shutdown price in the short run and the long run, derivation of a firm's supply curve in a perfectly competitive market, efficiency and X-inefficiency in the short run and the long run, contestable markets: features and implications, price competition and non-price competition, collusion and the Prisoner’s Dilemma in oligopolistic markets, including a two-player pay-off matrix",
+                        "explanation": "Perfect competition: Price - taker, MR = AR = P, short - run output at MC = MR, long - run normal profit, efficient. Monopoly: Controls price, restricts output, can earn supernormal profit long - term, X - inefficient. Monopolistic competition: Some price control, short - run profit maximization, long - run normal profit, productively inefficient. Oligopoly: Complex output & profit due to strategic interactions, price/non - price competition, potential for collusion & prisoner's dilemma."
+                    },
+                    {
+                        "id": "7.6.5",
+                        "description": "Definition and calculation of the concentration ratio",
+                        "explanation": "Measures market share of top firms. E.g., 4 - firm concentration ratio = sum of market shares of 4 largest firms. High ratio means concentrated market, low ratio means more competitive market."
+                    }
+                ]
+            },
+            {
+                "id": "7.7",
+                "description": "Growth and survival of firms",
+                "sub_topics": [
+                    {
+                        "id": "7.7.1",
+                        "description": "Reasons for different sizes of firms",
+                        "explanation": "Reasons for different sizes of firms: Firms vary in size due to factors like market demand, economies of scale, access to resources, technological capabilities, and competitive environment. Larger firms may benefit from cost advantages and market power, while smaller firms can be more flexible and specialized."
+                    },
+                    {
+                        "id": "7.7.2",
+                        "description": "Internal growth of firms: organic growth and diversification",
+                        "explanation": "Internal growth of firms: organic growth and diversification: Organic growth is the expansion of a firm through increasing its own production, sales, and market share over time using its internal resources and capabilities. Diversification is when a firm enters new product or market areas, either related or unrelated to its existing business, to spread risks and find new growth opportunities."
+                    },
+                    {
+                        "id": "7.7.3",
+                        "description": "External growth of firms – integration (mergers and takeovers): methods of integration (horizontal, vertical - forwards and backwards, conglomerate), reasons for integration, consequences of integration",
+                        "explanation": "External growth of firms – integration (mergers and takeovers): methods of integration (horizontal, vertical - forwards and backwards, conglomerate), reasons for integration, consequences of integration\n- Horizontal integration: Occurs when firms in the same industry and at the same stage of production merge or one acquires the other. It aims to increase market share, achieve economies of scale, reduce competition, and gain more bargaining power.\n- Vertical integration - forwards: A firm expands by integrating with businesses that are closer to the end consumer in the value chain, such as a manufacturer acquiring a distributor or retailer. This can help in controlling the distribution channels and enhancing customer reach.\n- Vertical integration - backwards: Involves a firm integrating with suppliers or businesses that are earlier in the production process. It can ensure a stable supply of inputs, reduce costs, and improve quality control.\n- Conglomerate integration: Firms from different industries merge or one takes over another. It is often done to diversify risks, access new markets, and use synergies across different business segments.\n- Reasons for integration: Can include achieving growth, enhancing competitiveness, accessing new technologies or resources, reducing costs, and increasing market power.\n- Consequences of integration: May lead to increased efficiency, improved market position, but also might face challenges like cultural clashes, integration difficulties, and potential antitrust issues."
+                    },
+                    {
+                        "id": "7.7.4",
+                        "description": "Cartels: conditions for an effective cartel, consequences of a cartel",
+                        "explanation": "Cartels: conditions for an effective cartel, consequences of a cartel\n- Conditions for an effective cartel: There must be a small number of firms in the market, homogeneous products, high barriers to entry, and the ability to monitor and enforce agreements among cartel members. Also, a stable market demand and similar cost structures among firms can facilitate cartel formation.\n- Consequences of a cartel: Cartels can lead to higher prices for consumers, reduced output, inefficiencies in resource allocation, and potential negative impacts on innovation. However, they may also bring stability to the market for the members in the short term and can sometimes lead to collusive behavior that distorts competition."
+                    },
+                    {
+                        "id": "7.7.5",
+                        "description": "Principal–agent problem arising from differing objectives of shareholders/owners and managers",
+                        "explanation": "Principal–agent problem arising from differing objectives of shareholders/owners and managers: The principal–agent problem occurs when the interests and objectives of shareholders (principals) who own the firm and managers (agents) who run the day - to - day operations of the firm do not align. Shareholders typically aim for maximum profits and long - term value creation, while managers may have goals like maximizing their own salaries, perks, or job security, which can lead to conflicts and inefficiencies in decision - making within the firm."
+                    }
+                ]
+            },
+            {
+                "id": "7.8",
+                "description": "Differing objectives and policies of firms",
+                "sub_topics": [
+                    {
+                        "id": "7.8.1",
+                        "description": "Traditional profit-maximising objective of firms",
+                        "explanation": "Traditional profit - maximising objective of firms: Firms aim to produce at the output level where marginal revenue (MR) equals marginal cost (MC). As long as MR > MC, producing an additional unit will increase profit. When MR < MC, producing an extra unit will reduce profit. By equating MR and MC, the firm maximizes the difference between total revenue and total cost, achieving the highest possible profit."
+                    },
+                    {
+                        "id": "7.8.2",
+                        "description": "An understanding of other objectives of firms: survival, profit satisficing, sales maximisation, revenue maximisation",
+                        "explanation": "An understanding of other objectives of firms: \n- Survival: In challenging market conditions, especially during economic downturns or intense competition, a firm's primary goal may be to stay in business. This could involve cost - cutting, output reduction, and maintaining a minimal level of operations to endure until the situation improves.\n- Profit satisficing: Instead of striving for maximum profit, a firm may aim for a satisfactory level of profit. This could be due to factors such as avoiding excessive risk, maintaining good relationships with stakeholders, or the preference for stable income over extreme profit - seeking.\n- Sales maximisation: Firms with this objective focus on increasing the volume of goods or services sold, often at the expense of short - term profit. This might be done to gain market share, build brand loyalty, or to benefit from economies of scale in the long run.\n- Revenue maximisation: The goal is to maximise total revenue. A firm will produce up to the point where marginal revenue is zero. Unlike profit - maximising, it doesn't directly consider costs, just the revenue generated from sales."
+                    },
+                    {
+                        "id": "7.8.3",
+                        "description": "Price discrimination – first, second and third degree: conditions for effective price discrimination, consequences of price discrimination",
+                        "explanation": "Price discrimination – first, second and third degree: conditions for effective price discrimination, consequences of price discrimination \n- First - degree price discrimination: Also known as perfect price discrimination, the firm charges each customer the maximum price they are willing to pay. Conditions for its effectiveness include the firm having perfect information about each customer's willingness to pay and the ability to prevent resale. The consequence is that the firm captures all the consumer surplus, leading to maximum profit for the firm but no consumer surplus.\n- Second - degree price discrimination: The firm charges different prices based on the quantity consumed, such as quantity discounts. Conditions for effectiveness are the ability to distinguish between different levels of consumption and prevent arbitrage. It can lead to increased sales volume and higher profit for the firm, and consumers may also benefit from quantity - based savings.\n- Third - degree price discrimination: The firm divides the market into different segments based on characteristics like age, location, or time of purchase and charges different prices in each segment. Conditions for this include the ability to identify and separate the market segments, and differences in price elasticity of demand among segments. Consequences can be increased profit for the firm as it can extract more value from different market segments, but it may also lead to some consumers paying higher prices than in a non - discriminatory market."
+                    },
+                    {
+                        "id": "7.8.4",
+                        "description": "Other pricing policies: limit pricing, predatory pricing, price leadership",
+                        "explanation": "Other pricing policies: \n- Limit pricing: A firm sets a price below the level that would maximise its short - term profit to deter potential new entrants into the market.\n- Predatory pricing: A firm deliberately sets prices very low, often below cost, with the intention of driving competitors out of the market. Once competitors are eliminated, the firm can raise prices and gain market power.\n- Price leadership: One dominant firm in the market sets the price, and other smaller firms follow. The price - leader may be the largest firm or the one with the lowest cost. This can lead to stability in the market but may also reduce competition."
+                    },
+                    {
+                        "id": "7.8.5",
+                        "description": "Relationship between price elasticity of demand and a firm’s revenue: in a normal downward sloping demand curve, in a kinked demand curve",
+                        "explanation": "Relationship between price elasticity of demand and a firm’s revenue: \n- In a normal downward - sloping demand curve: When demand is elastic (PED>1), a decrease in price will lead to an increase in total revenue. This is because the percentage increase in quantity demanded is greater than the percentage decrease in price. When demand is inelastic (PED<1), an increase in price will lead to an increase in total revenue since the percentage decrease in quantity demanded is less than the percentage increase in price."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "8",
+        "description": "Government microeconomic intervention (A Level)",
+        "main_topics": [
+            {
+                "id": "8.1",
+                "description": "Government policies to achieve efficient resource allocation and correct market failure",
+                "sub_topics": [
+                    {
+                        "id": "8.1.1",
+                        "description": "Application and effectiveness of measures to tackle different forms of market failure: specific and ad valorem indirect taxes, subsidies, price controls, production quotas, prohibitions and licences, regulation and deregulation, direct provision, pollution permits, property rights, nationalisation and privatisation, provision of information, behavioural insights and ‘nudge’ theory",
+                        "explanation": "Specific and ad valorem indirect taxes: Specific taxes are a fixed amount per unit, while ad valorem taxes are a percentage of the price. They can correct negative externalities by increasing the cost of production, reducing output to the socially optimal level. Effectiveness depends on the price elasticity of demand and supply.\nSubsidies: Given to producers or consumers to encourage activities with positive externalities. For producers, it lowers production costs and increases output. Its effectiveness is influenced by how well it targets the externality and the responsiveness of producers/consumers.\nProduction quotas: Limit the quantity produced. They can control over - production, such as in fisheries, but may lead to inefficiencies and rent - seeking behavior.\nProhibitions and licences: Prohibitions ban certain activities (e.g., illegal drugs). Licences restrict entry to certain industries, ensuring quality and controlling quantity. Their effectiveness depends on enforcement.\nRegulation and deregulation: Regulation sets rules for firms to correct market failures. Deregulation aims to increase competition by removing barriers. Success depends on the industry and how well regulations are designed and enforced.\nDirect provision: The government directly provides goods or services like public parks. It can ensure access, but may face issues of inefficiency and high costs.\nPollution permits: Firms are given a limited number of permits to pollute. They can trade these permits, encouraging the least - cost pollution reduction. Effectiveness depends on the number of permits issued and the trading mechanism.\nProperty rights: Clearly defining property rights can solve externalities. For example, if a river's ownership is clear, the owner can prevent pollution. However, it may be difficult to enforce in some cases.\nNationalisation and privatisation: Nationalisation is when the government takes over a firm, often to correct market failures. Privatisation is selling state - owned enterprises to the private sector to increase efficiency. Their success depends on the industry and management of the transition.\nProvision of information: The government provides information to correct information asymmetry. For example, food safety labels. Effectiveness depends on whether consumers can understand and act on the information.\nBehavioural insights and ‘nudge’ theory: Using knowledge of human behavior to influence decision - making. For example, default options for pension enrollment. Success depends on how well the nudge is designed to fit human behavior patterns."
+                    },
+                    {
+                        "id": "8.1.2",
+                        "description": "Government failure in microeconomic intervention: definition of government failure, causes of government failure, consequences of government failure",
+                        "explanation": "Definition of government failure: When government intervention in the market leads to an inefficient allocation of resources, making the situation worse instead of better.\nCauses of government failure: Lack of information, political self - interest, regulatory capture (where regulated firms influence the regulators), and bureaucratic inefficiencies.Consequences of government failure: Wasted resources, higher costs, reduced economic growth, and potential for creating new market distortions."
+                    }
+                ]
+            },
+            {
+                "id": "8.2",
+                "description": "Equity and redistribution of income and wealth",
+                "sub_topics": [
+                    {
+                        "id": "8.2.1",
+                        "description": "Difference between equity and equality",
+                        "explanation": "Equity refers to fairness, taking into account factors like needs and efforts. It focuses on the distribution of resources in a just way. Equality, on the other hand, means treating everyone the same regardless of their circumstances, aiming for uniform distribution of resources or opportunities. For example, providing equal pay for equal work is about equality, while equity might consider additional factors like the cost of living in different areas for fairer compensation."
+                    },
+                    {
+                        "id": "8.2.2",
+                        "description": "Difference between equity and efficiency",
+                        "explanation": "Equity is about fairness in distribution, ensuring that resources are allocated justly. Efficiency, however, is concerned with maximizing the output from a given set of inputs, achieving the highest level of productivity with the least amount of waste. In some cases, policies that promote equity, like redistributive taxes, may reduce efficiency as they can distort incentives. But in other situations, a more equitable society can lead to long - term efficiency gains by improving social stability and human capital development."
+                    },
+                    {
+                        "id": "8.2.3",
+                        "description": "Distinction between absolute poverty and relative poverty",
+                        "explanation": "Absolute poverty is defined by a fixed minimum standard of living, typically based on the amount of income needed to meet basic needs like food, shelter, and clothing. People in absolute poverty lack the resources to survive. Relative poverty, in contrast, is measured in relation to the average income or standard of living in a society. Those in relative poverty may have enough to survive but are far behind the average standard, experiencing a significant gap in economic well - being compared to the rest of the population."
+                    },
+                    {
+                        "id": "8.2.4",
+                        "description": "The poverty trap",
+                        "explanation": "The poverty trap is a situation where individuals or families are caught in a cycle of poverty. Low - income earners may face disincentives to increase their income, such as losing welfare benefits when they earn more. High marginal tax rates on additional earnings, combined with the loss of benefits, can make it difficult for them to escape poverty, as the net gain from working more is minimal or non - existent."
+                    },
+                    {
+                        "id": "8.2.5",
+                        "description": "Policies towards equity and equality, for example: negative income tax, universal benefits, means-tested benefits, universal basic income",
+                        "explanation": "Negative income tax: A system where low - income individuals receive payments from the government instead of paying taxes. It aims to provide a minimum income floor while still providing an incentive to work. Universal benefits are given to all members of a society regardless of their income level, like free public education, promoting equality. Means - tested benefits are provided based on an individual's or family's income and assets, targeting those in need but may create a poverty trap. Universal basic income is a regular, unconditional cash payment to all citizens, aiming to reduce poverty and inequality, and give people the freedom to pursue education, training, or start a business without the fear of losing benefits due to income changes."
+                    }
+                ]
+            },
+            {
+                "id": "8.3",
+                "description": "Labour market forces and government intervention",
+                "sub_topics": [
+                    {
+                        "id": "8.3.1",
+                        "description": "Demand for labour as a derived demand",
+                        "explanation": "The demand for labour is derived from the demand for the goods and services that labour produces. For example, if the demand for cars increases, the demand for auto workers will also rise as more cars need to be produced."
+                    },
+                    {
+                        "id": "8.3.2",
+                        "description": "Factors affecting demand for labour in a firm or an occupation",
+                        "explanation": "Product demand (higher demand for a product leads to more demand for labour), labour productivity (more productive workers are in higher demand), and the price of other factors of production (a rise in the cost of machinery may increase the demand for labour if they are substitutes)."
+                    },
+                    {
+                        "id": "8.3.3",
+                        "description": "Causes of shifts in and movement along the demand curve for labour in a firm or an occupation",
+                        "explanation": "Shifts are caused by changes in product demand, technological change affecting productivity, and the price of related factors. Movements along the curve occur when the wage rate changes, as firms will hire more or less labour in response to the wage change while other factors remain constant."
+                    },
+                    {
+                        "id": "8.3.4",
+                        "description": "Marginal revenue product (MRP) theory: definition and calculation of marginal revenue product, derivation of an individual firm’s demand for labour using marginal revenue product",
+                        "explanation": "Marginal revenue product is the additional revenue a firm earns by employing one more unit of a factor of production (labour in this case). It is calculated as the marginal product of labour (MPL) times the marginal revenue (MR), i.e., MRP = MPL×MR. A firm's demand for labour is derived from the MRP curve. The firm will hire labour up to the point where the wage rate equals the MRP, as hiring more would cost more than the additional revenue generated."
+                    },
+                    {
+                        "id": "8.3.5",
+                        "description": "Factors affecting the supply of labour to a firm or to an occupation: wage and non-wage factors",
+                        "explanation": "Wage factors include the wage rate itself (higher wages generally attract more workers). Non - wage factors are things like working conditions, job security, career prospects, and the level of required education or training."
+                    },
+                    {
+                        "id": "8.3.6",
+                        "description": "Causes of shifts in and movement along the supply curve of labour to a firm or an occupation",
+                        "explanation": "Shifts are due to changes in non - wage factors such as improved working conditions attracting more workers, or an increase in the required education reducing the supply. Movements along the curve are caused by changes in the wage rate. As the wage rate rises, more workers are willing to supply their labour, assuming other factors remain the same."
+                    },
+                    {
+                        "id": "8.3.7",
+                        "description": "Wage determination in perfect markets: equilibrium wage rate and employment in a labour market",
+                        "explanation": "In perfect markets, the equilibrium wage rate and employment in a labor market are determined at the intersection of the labor demand and labor supply curves. The labor demand curve slopes downward as firms hire more labor at lower wage rates due to the law of diminishing marginal returns. The labor supply curve slopes upward as workers are more willing to supply labor at higher wage rates. At the equilibrium point, the quantity of labor demanded equals the quantity of labor supplied, determining the equilibrium wage rate and the level of employment in the market."
+                    },
+                    {
+                        "id": "8.3.8",
+                        "description": "Wage determination in imperfect markets: influence of trade unions on wage determination and employment in a labour market, influence of government on wage determination and employment in a labour market using a national minimum wage, influence of monopsony employers on wage determination and employment in a labour market",
+                        "explanation": "In imperfect markets:\n- Trade unions can influence wage determination through collective bargaining. They can strive for higher wages and better working conditions. If successful, wages increase, but this may lead to a decrease in employment as firms' labor costs rise.\n- The government can set a national minimum wage. If it is above the equilibrium wage in a low - wage labor market, it can increase the wages of low - paid workers. However, it may also cause firms to reduce their labor demand, resulting in job losses, especially among the least productive workers.\n- Monopsony employers, who are the sole buyers of labor in a market, have the power to set wages lower than in a competitive market. They can also hire fewer workers as they face an upward - sloping labor supply curve. By restricting employment, they can keep wages down to maximize their profit."
+                    },
+                    {
+                        "id": "8.3.9",
+                        "description": "Determination of wage differentials by labour market forces",
+                        "explanation": "Wage differentials are determined by labor market forces. Differences in skills required for occupations play a major role. High - skill jobs like doctors or engineers command higher wages due to the long - term education and training needed, and the relatively low supply of qualified individuals. Working conditions also matter; jobs with unpleasant or dangerous conditions usually offer higher wages to attract workers. Additionally, differences in demand for the products or services produced in different occupations affect the demand for labor, and thus wage levels. For example, if the demand for a particular service is high, the workers providing that service will likely earn higher wages."
+                    },
+                    {
+                        "id": "8.3.10",
+                        "description": "Transfer earnings and economic rent: definition of transfer earnings, definition of economic rent, factors affecting transfer earnings and economic rent in an occupation",
+                        "explanation": "Transfer earnings are the minimum payment necessary to keep a factor of production (such as labor) in its current use. It is the opportunity cost, that is, the amount a worker could earn in the next best alternative job. Economic rent is the amount a factor of production earns above its transfer earnings. Factors affecting transfer earnings in an occupation include the availability of alternative jobs and the skills required for those jobs. If there are many similar jobs available, transfer earnings will be relatively stable. Economic rent in an occupation is influenced by the inelasticity of labor supply. If the supply of labor for a particular occupation is highly inelastic (e.g., due to unique skills or limited training opportunities), workers can earn significant economic rent as employers are willing to pay more to secure their services."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "9",
+        "description": "The macroeconomy (A Level)",
+        "main_topics": [
+            {
+                "id": "9.1",
+                "description": "The circular flow of income",
+                "sub_topics": [
+                    {
+                        "id": "9.1.1",
+                        "description": "The multiplier process: definition of the multiplier, formulae for and calculation of multiplier in a closed and open economy, with and without a government sector, calculation of various propensities",
+                        "explanation": "The multiplier refers to the magnifying effect of an initial change in autonomous spending on the total national income. In a closed economy, the multiplier reflects how the propensity to consume affects the income growth brought about by an increase in spending. In an open economy and an economy with the participation of the government sector, factors such as tax rates and the marginal propensity to import, in addition to the propensity to consume, also influence the size of the multiplier. Various propensities, such as the marginal propensity to consume, the marginal propensity to save, and the marginal propensity to import, respectively reflect the changes in consumption, savings, and imports when income changes."
+                    },
+                    {
+                        "id": "9.1.2",
+                        "description": "Components of Aggregate Demand (AD) and their determinants: consumption function, savings function, investment, government spending, net exports",
+                        "explanation": "The consumption function depends on factors such as disposable income, wealth, interest rates, and consumer confidence, and it describes the relationship between consumption and income. The savings function is related to the consumption function, and its determinants are similar to those of the consumption function but sometimes act in the opposite direction. Investment depends on factors such as interest rates, expected return on investment, business confidence, and technological progress. Government spending is determined by government policies and is used in areas such as infrastructure and education. Net exports are affected by factors such as the relative prices of domestic and foreign goods, exchange rates, and foreign income levels."
+                    },
+                    {
+                        "id": "9.1.3",
+                        "description": "Full employment level of national income and equilibrium level of national income: inflationary and deflationary gaps",
+                        "explanation": "The full - employment level of national income refers to the level of national income when all available resources in the economy are fully utilized and there is no cyclical unemployment. The equilibrium level of national income is the level of national income when aggregate demand equals aggregate supply, and at this point, the economy has no tendency to expand or contract. The inflationary gap means that the equilibrium level of national income is higher than the full - employment level of national income, which will lead to inflationary pressures. The deflationary gap means that the equilibrium level of national income is lower than the full - employment level of national income, which will lead to deflation and high unemployment."
+                    }
+                ]
+            },
+            {
+                "id": "9.2",
+                "description": "Economic growth and sustainability",
+                "sub_topics": [
+                    {
+                        "id": "9.2.1",
+                        "description": "Actual growth versus potential growth in national output",
+                        "explanation": "Actual growth in national output refers to the increase in the real - world production of goods and services in an economy over a certain period. It can be seen from the change of real GDP. Potential growth represents the maximum growth that an economy can achieve when all resources are fully and efficiently used, showing the long - term growth potential of the economy."
+                    },
+                    {
+                        "id": "9.2.2",
+                        "description": "Positive and negative output gaps",
+                        "explanation": "A positive output gap means actual output is higher than potential output, indicating an over - heated economy with over - utilization of resources, which may cause inflation. A negative output gap is when actual output is lower than potential output, meaning there are under - utilized resources and may lead to economic recession and higher unemployment."
+                    },
+                    {
+                        "id": "9.2.3",
+                        "description": "Business (trade) cycle: phases, causes, role of automatic stabilisers",
+                        "explanation": "Phases: The business cycle includes expansion (economic activities grow, consumption and investment rise), peak (the highest point of expansion, then growth slows down), contraction (economic activities decline, consumption and investment drop), and trough (the lowest point).\nCauses: Caused by technological innovation, changes in expectations, international economic fluctuations, and policy adjustments.\nRole of automatic stabilisers: Automatic stabilisers like progressive taxes and unemployment benefits can ease economic fluctuations. In recession, taxes decrease and benefits increase to boost demand; in boom, taxes increase and benefits decrease to control demand."
+                    },
+                    {
+                        "id": "9.2.4",
+                        "description": "Policies to promote economic growth and their effectiveness",
+                        "explanation": "Fiscal policy: The government can increase spending to boost demand directly, but it may crowd out private investment. Tax cuts can stimulate consumption and investment, yet may affect government revenue.\nMonetary policy: Central banks can lower interest rates and increase the money supply to stimulate the economy, but it may bring inflation risks.\nIndustrial policy: Supporting specific industries can promote industrial upgrading, but its effectiveness may be limited by wrong policy - making, poor implementation, etc."
+                    },
+                    {
+                        "id": "9.2.5",
+                        "description": "Inclusive economic growth: definition, impact on equity and equality, policies to promote inclusive growth",
+                        "explanation": "Definition: Inclusive economic growth means all members of society can participate in economic activities fairly and benefit from growth, sharing the fruits of development widely.\nImpact on equity and equality: It helps narrow the wealth gap, improve the situation of disadvantaged groups, and promote social fairness.\nPolicies: Increase investment in education and training, improve social security, promote regional coordinated development, and encourage the development of small and medium - sized enterprises to create more jobs."
+                    }
+                ]
+            },
+            {
+                "id": "9.3",
+                "description": "Employment/unemployment",
+                "sub_topics": [
+                    {
+                        "id": "9.3.1",
+                        "description": "Definition of full employment",
+                        "explanation": "Full employment means that nearly all who are willing and able to work can find jobs. It allows for a small amount of frictional and structural unemployment, representing an efficient use of labor resources in the economy."
+                    },
+                    {
+                        "id": "9.3.2",
+                        "description": "Equilibrium and disequilibrium unemployment (including hysteresis)",
+                        "explanation": "Equilibrium unemployment exists when the labor market is in balance, with the number of job seekers equaling job vacancies, mainly including frictional and structural unemployment. Disequilibrium unemployment occurs due to factors like wage rigidities, creating a labor surplus. Hysteresis in unemployment implies that a high - unemployment period can raise the natural rate of unemployment permanently, as workers' skills may decline during long - term joblessness."
+                    },
+                    {
+                        "id": "9.3.3",
+                        "description": "Voluntary and involuntary unemployment",
+                        "explanation": "Voluntary unemployment happens when individuals choose not to work at the current wage, perhaps preferring leisure or waiting for better offers. Involuntary unemployment is when people want to work at the existing wage but can't find jobs, often due to a lack of job openings in the economy."
+                    },
+                    {
+                        "id": "9.3.4",
+                        "description": "Natural rate of unemployment: definition, determinants, policy implications",
+                        "explanation": "Definition: The natural rate of unemployment is the rate when the economy is at its potential, including frictional and structural unemployment. \nDeterminants: It's determined by labor - market efficiency, technological change, and the generosity of unemployment benefits. \nPolicy implications: Policy - makers should focus on long - term structural policies to lower it, like improving education and training."
+                    },
+                    {
+                        "id": "9.3.5",
+                        "description": "Patterns and trends in (un)employment",
+                        "explanation": "Patterns in (un)employment include seasonal fluctuations, such as more jobs in tourism during peak seasons. Trends can be influenced by globalization, which may cause job losses in some industries and create new jobs in emerging sectors. Unemployment rates also vary by region, age, and skill level, for example, youth unemployment is usually higher."
+                    },
+                    {
+                        "id": "9.3.6",
+                        "description": "Mobility of labour: forms of labour mobility, factors affecting labour mobility",
+                        "explanation": "Forms of labor mobility: Geographical mobility is workers moving to different places for jobs, and occupational mobility is workers changing occupations. \nFactors affecting labor mobility: These include wage differences, cost of living, job - information availability, and personal factors like family ties."
+                    },
+                    {
+                        "id": "9.3.7",
+                        "description": "Policies to reduce unemployment and their effectiveness",
+                        "explanation": "Demand - side policies: Fiscal policies like government spending on infrastructure can create jobs. Monetary policies such as lowering interest rates can boost investment and consumption, leading to job creation. But their effectiveness may be limited by fiscal deficits and inflation. \nSupply - side policies: Improving education and training can enhance workers' skills, reducing structural unemployment. Reducing employment protection can make hiring and firing easier for firms, but may cause job - security concerns."
+                    }
+                ]
+            },
+            {
+                "id": "9.4",
+                "description": "Money and banking",
+                "sub_topics": [
+                    {
+                        "id": "9.4.1",
+                        "description": "Definition, functions and characteristics of money",
+                        "explanation": "Money is a widely accepted medium of exchange. Its functions include being a medium of exchange, a unit of account, a store of value and a standard of deferred payment. Characteristics of money typically include durability, portability, divisibility, uniformity, limited supply and acceptability."
+                    },
+                    {
+                        "id": "9.4.2",
+                        "description": "Definition of money supply",
+                        "explanation": "The money supply is the total amount of money available in an economy at a particular time, including currency in circulation and various types of deposits in banks and other financial institutions."
+                    },
+                    {
+                        "id": "9.4.3",
+                        "description": "Quantity theory of money (MV = PT)",
+                        "explanation": "The quantity theory of money states that the product of the money supply (M) and the velocity of money (V) is equal to the price level (P) times the volume of transactions (T). It suggests a relationship between the quantity of money and the level of economic activity and prices."
+                    },
+                    {
+                        "id": "9.4.4",
+                        "description": "Functions of commercial banks: deposit accounts, lending, securities, reserve ratio, objectives of commercial banks",
+                        "explanation": "Commercial banks offer deposit accounts to hold customers' money. They engage in lending to businesses and individuals to earn interest. They also deal in securities. The reserve ratio is the proportion of deposits that banks are required to hold as reserves. The main objectives of commercial banks are to make profits, maintain liquidity and manage risks."
+                    },
+                    {
+                        "id": "9.4.5",
+                        "description": "Causes of changes in the money supply in an open economy: credit creation, central bank, deficit financing, quantitative easing, balance of payments",
+                        "explanation": "In an open economy, the money supply can change due to credit creation by commercial banks. The central bank can influence the money supply through monetary policy tools. Deficit financing by the government may lead to an increase in the money supply. Quantitative easing is a policy used by central banks to increase the money supply by buying assets. The balance of payments can also affect the money supply, for example, a surplus may lead to an inflow of foreign currency and an expansion of the money supply."
+                    },
+                    {
+                        "id": "9.4.6",
+                        "description": "Policies to reduce inflation and their effectiveness",
+                        "explanation": "Policies to reduce inflation include contractionary monetary policy (raising interest rates, reducing money supply) and contractionary fiscal policy (cutting government spending, increasing taxes). Their effectiveness depends on various factors such as the elasticity of demand and supply, the degree of market competition, and the expectations of economic agents."
+                    },
+                    {
+                        "id": "9.4.7",
+                        "description": "Demand for money: liquidity preference theory",
+                        "explanation": "The liquidity preference theory suggests that people demand money for three motives: the transactions motive, the precautionary motive and the speculative motive. It posits that the demand for money is inversely related to the interest rate as people prefer to hold money for its liquidity rather than invest it when interest rates are low."
+                    },
+                    {
+                        "id": "9.4.8",
+                        "description": "Interest rate determination: loanable funds theory and Keynesian theory",
+                        "explanation": "The loanable funds theory states that the interest rate is determined by the supply and demand for loanable funds in the market. The Keynesian theory argues that the interest rate is determined by the interaction of the demand for and supply of money in the money market, with the central bank's control over the money supply playing an important role."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "10",
+        "description": "Government macroeconomic intervention (A Level)",
+        "main_topics": [
+            {
+                "id": "10.1",
+                "description": "Government macroeconomic policy objectives",
+                "sub_topics": [
+                    {
+                        "id": "10.1.1",
+                        "description": "Objectives in terms of inflation, balance of payments, unemployment, growth, development, sustainability and redistribution of income and wealth",
+                        "explanation": "Objectives in terms of inflation aim to maintain price stability, usually within a certain target range. For the balance of payments, the objective is often to achieve a sustainable balance, avoiding large and persistent deficits or surpluses. Regarding unemployment, the goal is to reach full employment or keep the unemployment rate at a low and acceptable level. Growth objectives focus on increasing the overall output and income of the economy over time. Development objectives involve not only economic growth but also improvements in various aspects such as education, health and living standards. Sustainability objectives require ensuring that economic activities can be continued in the long term without causing excessive damage to the environment and exhausting resources. The objective of income and wealth redistribution is to reduce inequality and ensure a more equitable distribution of economic benefits among different groups in society."
+                    }
+                ]
+            },
+            {
+                "id": "10.2",
+                "description": "Links between macroeconomic problems and their interrelatedness",
+                "sub_topics": [
+                    {
+                        "id": "10.2.1",
+                        "description": "Relationship between the internal value of money and the external value of money",
+                        "explanation": "The internal value of money is related to its purchasing power within the domestic economy, while the external value is reflected in the exchange rate. Generally, if the internal value of money decreases due to inflation, the external value of the currency may also tend to depreciate as its relative purchasing power declines compared to other currencies. However, other factors such as interest rate differentials, capital flows and market expectations also influence the relationship."
+                    },
+                    {
+                        "id": "10.2.2",
+                        "description": "Relationship between the balance of payments and inflation",
+                        "explanation": "A balance of payments surplus may lead to an increase in the money supply as foreign currency inflows are converted into domestic currency, which can potentially cause inflationary pressures. Conversely, a balance of payments deficit may lead to a decrease in the money supply and put downward pressure on prices. Additionally, inflation can affect a country's international competitiveness, thus influencing the balance of payments. Higher inflation may make exports more expensive and imports relatively cheaper, potentially worsening the trade balance."
+                    },
+                    {
+                        "id": "10.2.3",
+                        "description": "Relationship between growth and inflation",
+                        "explanation": "In the short run, economic growth may be accompanied by some inflation. As the economy expands, demand for goods and services increases, and if supply cannot keep up immediately, prices may rise. However, if economic growth is driven by productivity improvements and technological progress, it can lead to increased supply and may not necessarily cause high inflation. In the long run, sustainable economic growth is often associated with stable inflation. Excessive inflation can also have a negative impact on economic growth by distorting price signals, reducing investment and savings, and affecting international competitiveness."
+                    },
+                    {
+                        "id": "10.2.4",
+                        "description": "Relationship between growth and the balance of payments",
+                        "explanation": "Economic growth can have various effects on the balance of payments. Higher economic growth usually leads to an increase in imports as domestic demand for goods and services rises. If exports do not increase at the same rate, it may lead to a deterioration in the trade balance and a current account deficit. On the other hand, economic growth can also enhance a country's productive capacity and competitiveness, which may help to boost exports and improve the balance of payments in the long term. In addition, economic growth can attract foreign investment, which can have an impact on the capital account of the balance of payments."
+                    },
+                    {
+                        "id": "10.2.5",
+                        "description": "Relationship between inflation and unemployment: traditional Phillips curve, expectations-augmented Phillips curve",
+                        "explanation": "The traditional Phillips curve shows an inverse relationship between inflation and unemployment, suggesting that when inflation is high, unemployment is low and vice versa. This is based on the idea that in the short run, an increase in aggregate demand can lead to higher prices and more employment. The expectations-augmented Phillips curve takes into account the role of inflation expectations. It argues that the relationship between inflation and unemployment depends on whether actual inflation is higher or lower than expected. If people expect higher inflation, the Phillips curve may shift upwards, meaning that for a given level of unemployment, inflation will be higher. In the long run, the Phillips curve is often considered to be vertical at the natural rate of unemployment, indicating that there is no long-term trade-off between inflation and unemployment."
+                    }
+                ]
+            },
+            {
+                "id": "10.3",
+                "description": "Effectiveness of policy options to meet all macroeconomic objectives",
+                "sub_topics": [
+                    {
+                        "id": "10.3.1",
+                        "description": "Effectiveness of different policies in relation to different macroeconomic objectives: fiscal policy, monetary policy, supply-side policy, exchange rate policy, international trade policy",
+                        "explanation": "Fiscal Policy: It can be effective in stimulating economic growth and addressing unemployment during recessions. Expansionary fiscal policy, such as increasing government spending or cutting taxes, can boost aggregate demand. For inflation control, contractionary fiscal policy may be used by reducing government spending or increasing taxes. However, its effectiveness may be limited by factors like crowding out effects. \nMonetary Policy: It is crucial in controlling inflation. Central banks can raise interest rates to reduce money supply and curb inflation, or lower rates to stimulate economic growth and investment. But in a liquidity trap situation, its effectiveness might be compromised. \nSupply-side Policy: Focuses on improving the productive capacity and efficiency of the economy. Policies like reducing business regulations, investing in education and infrastructure can enhance long-term economic growth and help to control inflation by increasing supply. \nExchange Rate Policy: A devaluation of the currency can improve the balance of payments by making exports cheaper and imports more expensive, which can also boost economic growth. However, it may lead to higher import inflation. \nInternational Trade Policy: Trade liberalization can promote economic growth by increasing market access and promoting competition. Protectionist policies like tariffs and quotas may be used to protect domestic industries and reduce unemployment in the short term, but may harm overall economic efficiency and growth in the long run."
+                    },
+                    {
+                        "id": "10.3.2",
+                        "description": "Problems and conflicts arising from the outcome of these policies",
+                        "explanation": "Fiscal and Monetary Policy Conflict: Fiscal expansion and monetary tightening can work against each other. For example, if the government increases spending while the central bank raises interest rates, the impact on the economy can be confusing and may lead to inefficiencies. \nExchange Rate and Inflation Conflict: A depreciation of the currency to boost exports may lead to higher inflation due to more expensive imports, which can conflict with the objective of price stability. \nTrade and Growth Conflict: Protectionist trade policies might protect domestic jobs in the short term but can reduce economic growth in the long term by restricting competition and access to global markets. \nSupply-side and Demand-side Conflict: Supply-side policies take time to show effects. In the short term, focusing only on supply-side reforms may not address immediate demand deficiencies, leading to continued unemployment and slow growth."
+                    },
+                    {
+                        "id": "10.3.3",
+                        "description": "Existence of government failure in macroeconomic policies",
+                        "explanation": "Ineffective Policy Implementation: The government may have good intentions in formulating policies, but poor implementation, such as slow disbursement of funds for infrastructure projects or ineffective regulation enforcement, can lead to policies not achieving their intended goals. \nInformation Asymmetry: The government may not have complete and accurate information about the economy, leading to misjudgments in policy formulation. For example, miscalculating the multiplier effect of fiscal policy or the impact of interest rate changes on investment. \nPolitical Interference: Policies may be influenced by political considerations rather than pure economic rationality. Politicians may implement short-term populist policies that are not beneficial for long-term economic stability and growth. \nLack of Coordination: Different government departments may have different objectives and policies, lacking coordination. For example, the finance department and the central bank may have conflicting policies, resulting in inefficiencies in macroeconomic management."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "11",
+        "description": "International economic issues (A Level)",
+        "main_topics": [
+            {
+                "id": "11.1",
+                "description": "Policies to correct disequilibrium in the balance of payments",
+                "sub_topics": [
+                    {
+                        "id": "11.1.1",
+                        "description": "Components of the balance of payments accounts: current account, financial account and capital account",
+                        "explanation": "Current Account: It mainly includes trade in goods and services, income (such as wages, investment income), and current transfers (like foreign aid, remittances). The trade in goods and services records exports and imports of tangible goods and intangible services. Income reflects the earnings from factors of production between countries. Current transfers involve one-way transfers of funds without corresponding economic transactions.\nFinancial Account: Records transactions related to financial assets and liabilities between residents and non-residents, such as direct investment, portfolio investment, and other investment. Direct investment includes cross-border investment in enterprises with the purpose of obtaining long-term control or significant influence. Portfolio investment involves transactions in stocks, bonds and other financial securities. Other investment includes loans, deposits and other financial transactions.\nCapital Account: Generally includes capital transfers and the acquisition and disposal of non-produced, non-financial assets. Capital transfers may involve transfers of fixed assets or debt forgiveness. The acquisition and disposal of non-produced, non-financial assets refer to transactions such as the purchase and sale of patents, copyrights and leases of natural resources."
+                    },
+                    {
+                        "id": "11.1.2",
+                        "description": "Effect of fiscal, monetary, supply-side, protectionist and exchange rate policies on the balance of payments",
+                        "explanation": "Fiscal Policy: Expansionary fiscal policy, which increases government spending or cuts taxes, may boost domestic demand, leading to more imports and potentially worsening the current account balance. Conversely, contractionary fiscal policy can reduce domestic demand and imports, improving the current account balance under certain conditions.\nMonetary Policy: A tight monetary policy that raises interest rates can attract foreign capital inflows, improving the financial account. However, it may also lead to a stronger currency, which could make exports more expensive and imports cheaper, affecting the current account. Loose monetary policy has the opposite effect.\nSupply-side Policy: By enhancing the productivity and competitiveness of the domestic economy, supply-side policies can increase exports and potentially improve the current account balance in the long term.\nProtectionist Policy: Protectionist measures like tariffs and quotas can reduce imports, which may initially improve the current account balance. But they may also lead to retaliation from other countries, harming exports and having negative impacts on overall trade and the balance of payments in the long run.\nExchange Rate Policy: A devaluation of the domestic currency can make exports cheaper and imports more expensive, thus improving the current account balance. A revaluation has the opposite effect. In addition, exchange rate changes can also affect capital flows and the financial account."
+                    },
+                    {
+                        "id": "11.1.3",
+                        "description": "Difference between expenditure-switching and expenditure-reducing policies",
+                        "explanation": "Expenditure-switching Policies: These policies aim to redirect domestic and foreign spending between domestic and foreign goods and services. Examples include exchange rate adjustments and trade policies. For instance, a currency devaluation makes domestic goods relatively cheaper compared to foreign goods, causing consumers to switch their spending from foreign to domestic goods, thereby improving the balance of payments.\nExpenditure-reducing Policies: These policies are designed to reduce the overall level of domestic spending. Fiscal austerity measures such as reducing government spending and increasing taxes, or tight monetary policies that raise interest rates to reduce consumption and investment, are examples. By reducing domestic demand, these policies can lead to a decrease in imports, which may help to improve the balance of payments, especially the current account balance. The main difference is that expenditure-switching policies focus on changing the direction of spending, while expenditure-reducing policies focus on reducing the total amount of spending to achieve balance of payments adjustments."
+                    }
+                ]
+            },
+            {
+                "id": "11.2",
+                "description": "Exchange rates",
+                "sub_topics": [
+                    {
+                        "id": "11.2.1",
+                        "description": "Measurement of exchange rates: nominal and real exchange rates, trade-weighted exchange rates",
+                        "explanation": "Nominal Exchange Rate: It represents the rate at which one currency can be exchanged for another in the foreign exchange market, simply showing the relative price of currencies. For example, if 1 euro can be exchanged for 1.1 US dollars, this is the nominal exchange rate.\nReal Exchange Rate: It adjusts the nominal exchange rate for the difference in price levels between two countries. It reflects the relative purchasing power of two currencies.\nTrade - weighted Exchange Rate: It is an index calculated by weighting the exchange rates of a country's currency against those of its major trading partners according to their importance in trade. It gives a more comprehensive measure of a currency's value in international trade."
+                    },
+                    {
+                        "id": "11.2.2",
+                        "description": "Determination of exchange rates under fixed and managed systems",
+                        "explanation": "Fixed Exchange Rate System: In this system, the government or central bank intervenes in the foreign exchange market. They buy or sell domestic currency to keep the exchange rate at a pre - determined level. For example, if the domestic currency is appreciating, the central bank sells domestic currency and buys foreign currency to maintain the fixed rate.\nManaged Exchange Rate System: The exchange rate is allowed to fluctuate within a certain range. The central bank steps in when the exchange rate moves outside the acceptable range. Tools like interest rate adjustments, foreign exchange market interventions, and capital controls are used to influence the exchange rate."
+                    },
+                    {
+                        "id": "11.2.3",
+                        "description": "Distinction between revaluation and devaluation of a fixed exchange rate",
+                        "explanation": "Revaluation: It means increasing the value of a currency in a fixed exchange rate system. For example, if the exchange rate of a country's currency changes from 1 unit of domestic currency = 10 units of foreign currency to 1 unit of domestic currency = 12 units of foreign currency, it is a revaluation. Revaluation makes imports cheaper and exports more expensive.\nDevaluation: It is the deliberate reduction of a currency's value in a fixed exchange rate system. For example, if the exchange rate changes from 1 unit of domestic currency = 10 units of foreign currency to 1 unit of domestic currency = 8 units of foreign currency, it is a devaluation. Devaluation makes exports more competitive as they become cheaper for foreign buyers, while imports become more expensive."
+                    },
+                    {
+                        "id": "11.2.4",
+                        "description": "Changes in the exchange rate under different exchange rate systems",
+                        "explanation": "Fixed Exchange Rate System: In theory, the exchange rate remains constant. But in reality, economic fundamentals such as inflation differentials, balance of payments imbalances can create pressure for change. If these pressures are strong enough, the fixed exchange rate may be adjusted through revaluation or devaluation.\nFloating Exchange Rate System: The exchange rate is determined by the forces of supply and demand in the foreign exchange market. Changes in factors like interest rate differentials, economic growth prospects, and market sentiment can cause the exchange rate to fluctuate continuously.\nManaged Floating Exchange Rate System: The exchange rate is mainly determined by market forces but with occasional central bank interventions. The central bank steps in when the exchange rate movement is considered excessive or not in line with the country's economic goals, leading to changes in the exchange rate within a managed range."
+                    },
+                    {
+                        "id": "11.2.5",
+                        "description": "Effects of changing exchange rates on the external economy using Marshall-Lerner and J curve analysis",
+                        "explanation": "Marshall - Lerner Condition: It states that for a currency devaluation to improve the balance of trade, the sum of the price elasticities of demand for exports and imports must be greater than 1. If this condition is met, a devaluation will lead to an increase in export revenue and a decrease in import expenditure, thus improving the trade balance.\nJ - curve Analysis: When a currency is devalued, in the short run, the trade balance may worsen because the quantity of exports and imports does not adjust immediately due to existing contracts and market rigidities. However, over time, as prices adjust, demand becomes more elastic, and the trade balance starts to improve, forming a J - shaped curve. In the long run, if the Marshall - Lerner condition holds, the devaluation will have a positive impact on the trade balance."
+                    }
+                ]
+            },
+            {
+                "id": "11.3",
+                "description": "Economic development",
+                "sub_topics": [
+                    {
+                        "id": "11.3.1",
+                        "description": "Classification of economies in terms of their level of development",
+                        "explanation": "Economies are generally classified into developed economies, developing economies, and emerging economies.\n- Developed Economies: These have a high level of economic development, advanced technology, and their industrial structures are dominated by services and high - tech manufacturing, such as the US, Japan, and Germany. They feature high per capita income, well - developed infrastructure, and advanced education and healthcare systems.\n- Developing Economies: Their economies are in the process of development, with room for improvement in technological levels and industrial structures. They have relatively low per capita income, and their infrastructure and social services are relatively weak, like India and Vietnam.\n- Emerging Economies: These economies experience rapid growth and are gradually rising in the global economic status. They are transforming from traditional industries to high - end manufacturing and service industries, such as China, Brazil, and Russia."
+                    },
+                    {
+                        "id": "11.3.2",
+                        "description": "Classification of economies in terms of their level of national income",
+                        "explanation": "Based on the standards of institutions like the World Bank, economies are generally classified as follows:\n- High - income Economies: They have a high per capita national income, usually above $12,696. Their economies are mature and diversified, such as the Nordic countries and Australia.\n- Middle - income Economies: They have a per capita national income within a certain range and can be further divided into upper - middle - income economies and lower - middle - income economies. Upper - middle - income economies generally have a per capita national income between $4,096 - $12,695, like China. Lower - middle - income economies have a per capita national income between $1,046 - $4,095, such as Indonesia.\n- Low - income Economies: They have a relatively low per capita national income, usually below a certain threshold."
+                    },
+                    {
+                        "id": "11.3.3",
+                        "description": "Indicators of living standards and economic development: monetary indicators, non-monetary indicators, composite indicators (HDI, MEW, MPI), Kuznets curve",
+                        "explanation": "Monetary Indicators: These include per capita GDP, per capita income, and wage levels. They measure economic development in terms of money, reflecting the overall economic output and individual income levels.\nNon - monetary Indicators: Such as life expectancy, literacy rate, access to clean water, and housing quality. They focus on aspects of people's well - being that are not directly related to money, showing the quality of life from a social and environmental perspective.\nComposite Indicators:\n- HDI (Human Development Index): Combines indicators of life expectancy, education (mean years of schooling and expected years of schooling), and per capita income to provide a comprehensive measure of human development. A higher HDI indicates a higher level of development in terms of people's capabilities and opportunities.\n- MEW (Measure of Economic Welfare): Takes into account not only economic output but also factors like environmental quality, leisure time, and non - market activities. It aims to give a more accurate picture of overall economic well - being.\n- MPI (Multidimensional Poverty Index): Considers multiple dimensions of poverty, including health, education, and living standards, to identify the poor and measure the severity of poverty.\nKuznets Curve: It hypothesizes an inverted U - shaped relationship between economic development (usually measured by per capita income) and income inequality. As an economy develops from a low - income to a middle - income stage, income inequality first increases and then decreases as the economy continues to grow."
+                    },
+                    {
+                        "id": "11.3.4",
+                        "description": "Comparison of economic growth rates and living standards over time and between countries",
+                        "explanation": "Over time, a country's economic growth rate can be measured by the percentage change in its GDP over a specific period. An increasing growth rate may indicate an expanding economy. Living standards can be evaluated through various indicators mentioned above. As the economy grows, living standards generally improve, but the relationship may not be linear due to factors like income distribution.\nBetween countries, comparing economic growth rates helps to understand which countries are developing more rapidly. Comparing living standards, using a combination of monetary and non - monetary indicators, reveals differences in the quality of life. For example, a country with a high economic growth rate may not necessarily have a high living standard if the benefits of growth are not evenly distributed, or if there are negative impacts on the environment and social services."
+                    }
+                ]
+            },
+            {
+                "id": "11.4",
+                "description": "Characteristics of countries at different levels of development",
+                "sub_topics": [
+                    {
+                        "id": "11.4.1",
+                        "description": "Population growth and structure: measurement and causes of changes in birth rate, death rate, infant mortality, net migration, optimum population, level of urbanisation",
+                        "explanation": "Measurement and Causes of Changes in Birth Rate\n- Measurement: The birth rate is typically measured as the number of live births per 1,000 population in a given year. It is calculated by dividing the number of live births in a year by the mid-year population and multiplying by 1,000. \n- Causes of Changes: Cultural and social norms play a significant role. For example, in some cultures, having large families is highly valued, which may lead to a higher birth rate. Economic factors also matter. In developed countries with high living costs and better education and career opportunities for women, people tend to have fewer children, resulting in a lower birth rate. Availability of family planning services and government policies such as birth control measures or incentives for having children can also impact the birth rate.\nMeasurement and Causes of Changes in Death Rate\n- Measurement: The death rate is measured as the number of deaths per 1,000 population in a given year. It is calculated by dividing the number of deaths in a year by the mid-year population and multiplying by 1,000. \n- Causes of Changes: Advances in medical technology and healthcare services can significantly reduce the death rate by improving the treatment of diseases and increasing life expectancy. Changes in lifestyle, such as a healthier diet and more exercise, can also contribute to a lower death rate. On the other hand, the occurrence of natural disasters, epidemics, and wars can increase the death rate.\nMeasurement and Causes of Changes in Infant Mortality\n- Measurement: Infant mortality is measured as the number of deaths of infants under one year of age per 1,000 live births. \n- Causes of Changes: The quality of prenatal and postnatal care is crucial. Mothers with poor access to healthcare during pregnancy are more likely to have infants with health problems. Socioeconomic factors also play a role. In areas with high poverty levels, there may be limited access to clean water, proper nutrition, and healthcare, leading to a higher infant mortality rate.\nMeasurement and Causes of Changes in Net Migration\n- Measurement: Net migration is calculated as the difference between the number of immigrants (people moving into a country or region) and the number of emigrants (people moving out of a country or region) in a given period. \n- Causes of Changes: Economic opportunities are a major factor. People tend to move to areas with better job prospects and higher wages. Political stability and social environment also influence migration. People may move to countries with more stable political situations and better social welfare. In addition, natural disasters and conflicts in some regions can force people to migrate to other places for safety.\nOptimum Population\n- Measurement: There is no single fixed measurement for the optimum population. It is often determined by considering factors such as the sustainable use of resources, economic development level, and social welfare. \n- Causes of Changes: Technological progress can change the optimum population. For example, with the development of new technologies, the efficiency of resource utilization may increase, allowing a region to support a larger population. Changes in economic structure and consumption patterns can also affect the optimum population. If an economy shifts from labor-intensive to technology-intensive, the demand for labor may change, thus affecting the optimal population size.\nMeasurement and Causes of Changes in Level of Urbanisation\n- Measurement: The level of urbanisation is measured as the percentage of the urban population in the total population of a country or region. \n- Causes of Changes: Industrialization is a major driver. As industries develop, they attract a large number of people to cities for employment. The concentration of resources such as education, medical care, and cultural facilities in cities also makes people tend to move to cities. In addition, the development of transportation and communication technologies makes it more convenient for people to live and work in cities."
+                    },
+                    {
+                        "id": "11.4.2",
+                        "description": "Income distribution: calculation of Gini coefficient and Lorenz curve analysis",
+                        "explanation": "Calculation of Gini Coefficient\nThe Gini coefficient is a measure of income inequality. It is calculated based on the Lorenz curve. The formula for calculating the Gini coefficient is , where is the area between the Lorenz curve and the line of perfect equality (the diagonal line), and is the area below the Lorenz curve. The Gini coefficient ranges from 0 to 1. A value of 0 represents perfect equality (everyone has the same income), and a value of 1 represents maximum inequality (one person has all the income and others have none).\nLorenz Curve Analysis\nThe Lorenz curve is a graphical representation of income distribution. It plots the cumulative percentage of the population on the horizontal axis and the cumulative percentage of income on the vertical axis. The curve shows how the actual income distribution deviates from the line of perfect equality. If the Lorenz curve is close to the line of perfect equality, it indicates a relatively equal income distribution. The further the Lorenz curve is from the line of perfect equality, the greater the income inequality. By analyzing the shape and position of the Lorenz curve, we can understand the degree and characteristics of income distribution in a country or region."
+                    },
+                    {
+                        "id": "11.4.3",
+                        "description": "Economic structure: employment composition, pattern of trade at different levels of development",
+                        "explanation": "Employment Composition at Different Levels of Development\n- Low-income and Less Developed Economies: The employment composition in these economies is often dominated by the primary sector, such as agriculture and mining. A large proportion of the labor force is engaged in these activities to meet basic food and raw material needs. For example, in some African countries, more than 50% of the workforce may be in the agricultural sector.\n- Middle-income and Emerging Economies: As economies develop, the secondary sector, including manufacturing and construction, starts to grow and absorb more labor. The proportion of the labor force in the primary sector gradually decreases, while that in the secondary sector increases. At the same time, the service sector also begins to expand. In countries like India and Vietnam, the manufacturing and service sectors have been growing rapidly in recent years, attracting a significant number of workers from the agricultural sector.\n- High-income and Developed Economies: In highly developed economies, the service sector usually accounts for the largest proportion of employment. Industries such as finance, education, healthcare, and professional services are the main sources of employment. For example, in the United States and the United Kingdom, more than 70% of the labor force is employed in the service sector.\nPattern of Trade at Different Levels of Development\n- Low-income and Less Developed Economies: These economies typically export primary products such as agricultural products, minerals, and raw materials and import manufactured goods and high-tech products. Their trade is often based on their natural resource endowments. For example, some oil-producing countries in the Middle East mainly export crude oil and import refined petroleum products and other industrial goods.\n- Middle-income and Emerging Economies: As their industrial capabilities improve, emerging economies start to export more manufactured goods, especially in labor-intensive industries such as textiles and electronics assembly. They also import advanced technology and capital goods to support their industrial upgrading. At the same time, they may begin to expand their exports of some services, such as software development and business process outsourcing. China and Brazil are examples of emerging economies that have seen significant growth in manufactured goods exports.\n- High-income and Developed Economies: Developed economies tend to export high-tech products, capital-intensive goods, and knowledge-based services such as financial services and intellectual property. They import a wide range of goods, including primary products and some low-cost manufactured goods from developing countries. For instance, Japan and Germany are known for exporting high-quality automobiles, machinery, and electronic products and importing energy and raw materials."
+                    }
+                ]
+            },
+            {
+                "id": "11.5",
+                "description": "Relationship between countries at different levels of development",
+                "sub_topics": [
+                    {
+                        "id": "11.5.1",
+                        "description": "International aid: forms of aid, reasons for giving aid, effects of aid, importance of aid",
+                        "explanation": "- Forms of aid\n- Financial aid: Grants and low-interest loans\n- Technical assistance: Dispatch of experts and technicians\n- Humanitarian aid: Provision of food, medicine, clothing, etc.\n- Reasons for giving aid\n- Humanitarian concerns\n- Geopolitical interests\n- Promote development\n- Effects of aid\n- Positive: Improves infrastructure, education, healthcare; promotes economic development\n- Negative: May cause dependence, crowd out domestic investment, be misused\n- Importance of aid\n- Fills gaps in funds, technology, resources\n- Promotes international cooperation"
+                    },
+                    {
+                        "id": "11.5.2",
+                        "description": "Trade and investment",
+                        "explanation": "- Trade: Exchange of goods and services between countries, promotes resource allocation and expands market scale via comparative advantage\n- Investment: Includes foreign direct investment and portfolio investment; brings capital, technology, management experience to host country, promotes growth and upgrading while investors gain returns"
+                    },
+                    {
+                        "id": "11.5.3",
+                        "description": "Role of multinational companies (MNCs): definition, activities, consequences",
+                        "explanation": "- Definition: Enterprises with business operations in multiple countries, having global business strategy and control over overseas subsidiaries\n- Activities\n- Production and operation: Set up factories using local resources\n- Research and development: Integrate global technological resources for R & D\n- Marketing: Establish global marketing networks for product and service sales\n- Consequences\n- Positive: Promotes technology and management transfer, creates jobs, boosts economic growth\n- Negative: May cause environmental issues, overexploit local resources"
+                    },
+                    {
+                        "id": "11.5.4",
+                        "description": "Foreign Direct Investment (FDI): definition, consequences",
+                        "explanation": "- Definition: Investment made by a company or individual in one country into a business interest in another country, involving a long-term relationship and control or significant influence\n- Consequences\n- Positive: Brings in capital, advanced technology and management experience, stimulates economic growth, upgrades industries, increases employment\n- Negative: May lead to crowding out of domestic enterprises, potential exploitation of resources, and possible negative impacts on the environment"
+                    },
+                    {
+                        "id": "11.5.5",
+                        "description": "External debt: causes, consequences",
+                        "explanation": "- Causes\n- Financing for infrastructure and development projects\n- Macroeconomic imbalances\n- Fluctuations in international economic environment\n- Consequences\n- Positive: Can support economic development in the short term if used properly\n- Negative: Heavy debt burden may lead to debt crises, affect credit ratings, crowd out domestic investment, and limit fiscal space"
+                    },
+                    {
+                        "id": "11.5.6",
+                        "description": "Role of the International Monetary Fund (IMF)",
+                        "explanation": "- Promotes international monetary cooperation\n- Facilitates the balanced growth of international trade\n- Provides short-term financial assistance to countries with balance of payments problems\n- Monitors global economic and financial conditions and provides policy advice"
+                    },
+                    {
+                        "id": "11.5.7",
+                        "description": "Role of the World Bank",
+                        "explanation": "- Provides long-term loans and grants for development projects in developing countries\n- Focuses on reducing poverty and promoting sustainable development\n- Offers technical assistance and knowledge sharing in various fields such as infrastructure, education, and healthcare\n- Supports capacity building and institutional development in recipient countries"
+                    }
+                ]
+            },
+            {
+                "id": "11.6",
+                "description": "Globalisation",
+                "sub_topics": [
+                    {
+                        "id": "11.6.1",
+                        "description": "Meaning of globalisation and its causes and consequences",
+                        "explanation": "- Meaning: Globalisation refers to the increasing integration and interdependence of the world's economies, cultures, and societies. It involves the free flow of goods, services, capital, technology, and people across national borders, leading to a more interconnected and unified world.\n- Causes:\n- Technological progress: Rapid advancements in transportation, communication, and information technology have significantly reduced the costs of cross - border transactions and made it easier for businesses to operate globally.\n- Liberalisation of trade and investment: Many countries have reduced trade barriers and relaxed restrictions on foreign investment, promoting the free flow of goods and capital.\n- Corporate global expansion: Multinational corporations have actively expanded their operations overseas to access new markets, resources, and low - cost production factors.\n- Consequences:\n- Economic aspects: It has led to increased international trade and investment, promoted economic growth, and improved resource allocation efficiency. However, it may also cause income inequality and job losses in some industries.\n- Social and cultural aspects: Globalisation has facilitated the exchange of cultures and ideas, but it may also lead to the homogenisation of cultures and the erosion of local traditions.\n- Environmental aspects: The expansion of global production and consumption has put greater pressure on the environment, such as increased energy consumption and carbon emissions."
+                    },
+                    {
+                        "id": "11.6.2",
+                        "description": "Distinction between a free trade area, a customs union, a monetary union and full economic union",
+                        "explanation": "- Free - trade area:\n- Definition: An agreement among countries to eliminate tariffs and other trade barriers on goods and services traded among them, while each country retains its own trade policies towards non - member countries.\n- Characteristics: Free trade within the area; members independently set trade policies for non - members.\n- Example: The North American Free Trade Agreement (NAFTA, now the United States - Mexico - Canada Agreement, USMCA).\n- Customs union:\n- Definition: Member countries not only remove internal trade barriers but also adopt a common external tariff policy towards non - member countries.\n- Characteristics: Common external tariff, enhancing the consistency of trade policies among members.\n- Example: The Southern Common Market (MERCOSUR).\n- Monetary union:\n- Definition: Member countries use a common currency or maintain a fixed exchange rate and establish a unified monetary policy - making institution.\n- Characteristics: Monetary integration, eliminating exchange - rate fluctuations and facilitating trade and investment.\n- Example: The Eurozone.\n- Full economic union:\n- Definition: It represents the highest level of economic integration, where member countries unify not only trade, tariff, and monetary policies but also coordinate policies in areas such as fiscal, labor, and regional development.\n- Characteristics: Comprehensive economic policy harmonization, aiming for a high - degree of economic integration and cooperation.\n- Example: The European Union, which has elements approaching a full economic union, with some areas still having national - level decision - making but significant coordination in many economic aspects."
+                    },
+                    {
+                        "id": "11.6.3",
+                        "description": "Trade creation and trade diversion",
+                        "explanation": "- Trade creation:\n- Definition: Occurs when the formation of a regional economic integration group (like a free - trade area or customs union) leads to a shift in production from a high - cost domestic producer to a low - cost producer within the group. This results in an increase in the total volume of trade and economic welfare as resources are reallocated more efficiently.\n- Example: Suppose Country A used to produce a good at a high cost domestically. After joining a free - trade area with Country B, which can produce the good at a lower cost, Country A imports the good from Country B. This new trade relationship creates additional trade and benefits both countries as they can now specialise according to their comparative advantages.\n- Trade diversion:\n- Definition: Happens when a regional economic integration group causes trade to shift from a more efficient non - member producer to a less efficient member producer. This can lead to a decrease in overall economic welfare as resources are not allocated in the most efficient way globally.\n- Example: Country A was importing a good from a non - member Country C, which is the most efficient producer. But after forming a customs union with Country B, which produces the good at a higher cost, Country A starts importing the good from Country B due to the preferential trade policies within the union. This diversion of trade from the more efficient producer (Country C) to the less efficient one (Country B) can reduce overall economic efficiency."
+                    }
+                ]
+            }
+        ]
+    }
+]

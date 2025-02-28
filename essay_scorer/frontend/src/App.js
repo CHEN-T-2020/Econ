@@ -1,143 +1,101 @@
-import React, { useState, useEffect } from 'react';
+import React, { useCallback } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { ExamProvider, useExam } from './contexts/ExamContext';
+import useFetchExams from './hooks/useFetchExams';
+import ExamSelector from './components/ExamSelector';
+import QuestionSelector from './components/QuestionSelector';
+import QuestionDetails from './components/QuestionDetails';
+import ResultDisplay from './components/ResultDisplay';
+import KnowledgePage from './pages/KnowledgePage';
 import axios from 'axios';
 import './App.css';
 
-function App() {
-  const [essay, setEssay] = useState('');
-  const [result, setResult] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [exams, setExams] = useState([]);
-  const [selectedExamId, setSelectedExamId] = useState('');
-  const [selectedQuestionId, setSelectedQuestionId] = useState('');
-  const [currentQuestion, setCurrentQuestion] = useState(null);
-  const [showFullScheme, setShowFullScheme] = useState(false);
-  const [loadingExams, setLoadingExams] = useState(true);
-  const [error, setError] = useState(null);
+// 原AppLayout组件重命名为HomePage
+const HomePage = () => {
+  const { exams, loading, error } = useFetchExams();
+  const {
+    selectedExamId,
+    setSelectedExamId,
+    selectedQuestionId,
+    setSelectedQuestionId,
+    currentQuestion,
+    setCurrentQuestion,
+    essay,
+    setEssay,
+    result,
+    setResult,
+    showFullScheme,
+    setShowFullScheme
+  } = useExam();
 
-  // 加载考试数据
-  useEffect(() => {
-    const fetchExams = async () => {
-      try {
-        const response = await axios.get('http://localhost:3001/api/exams');
-        const formatted = response.data.map(exam => ({
-          ...exam,
-          questions: exam.questions.map(q => ({
-            ...q,
-            prompt: q.question,
-            requirement: q.mark_scheme.split('\n').slice(0, 3).join('\n'),
-            fullMarkScheme: q.mark_scheme
-          }))
-        }));
-        setExams(formatted);
-      } catch (err) {
-        setError('无法加载考试数据，请检查网络连接后重试');
-      } finally {
-        setLoadingExams(false);
-      }
-    };
-    fetchExams();
-  }, []);
-
-  // 处理考试选择
-  const handleExamChange = (e) => {
-    const examId = e.target.value;
+  const handleExamChange = useCallback((examId) => {
     setSelectedExamId(examId);
     setSelectedQuestionId('');
     setCurrentQuestion(null);
-  };
+  }, [setSelectedExamId, setSelectedQuestionId, setCurrentQuestion]);
 
-  // 处理题目选择
-  const handleQuestionChange = (e) => {
-    const questionId = e.target.value;
+  const handleQuestionChange = useCallback((questionId) => {
     setSelectedQuestionId(questionId);
-    const selectedExam = exams.find(exam => exam.id === selectedExamId);
+    const selectedExam = exams.find(e => e.id === selectedExamId);
     const question = selectedExam?.questions.find(q => q.id === questionId);
     setCurrentQuestion(question || null);
-  };
+  }, [exams, selectedExamId, setSelectedQuestionId, setCurrentQuestion]);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = useCallback(async () => {
     if (!currentQuestion) {
       alert('请先选择题目');
       return;
     }
-    setLoading(true);
-    
+
     try {
       const response = await axios.post('http://localhost:3001/api/grade', {
-        essay: essay,
+        essay,
         examId: selectedExamId,
         questionId: selectedQuestionId,
         questionPrompt: currentQuestion.question,
         questionRequirement: currentQuestion.fullMarkScheme
       });
-      
       setResult(response.data);
     } catch (error) {
       setResult(`请求失败：${error.message}`);
     }
-    
-    setLoading(false);
-  };
+  }, [currentQuestion, essay, selectedExamId, selectedQuestionId, setResult]);
+
+  if (error) {
+    return <div className="error-banner">{error}</div>;
+  }
 
   return (
     <div className="container">
       <h1>经济学论文智能评分系统</h1>
       
-      {error && <div className="error-banner">{error}</div>}
-      
       <div className="selection-container">
-        {loadingExams ? (
+        {loading ? (
           <div className="loader">正在加载考试数据...</div>
         ) : (
           <>
-            <select
+            <ExamSelector
+              exams={exams}
               value={selectedExamId}
               onChange={handleExamChange}
-              className="exam-selector"
-            >
-              <option value="">请选择考试场次</option>
-              {exams.map(exam => (
-                <option key={exam.id} value={exam.id}>{exam.name}</option>
-              ))}
-            </select>
-
-            <select
+            />
+            
+            <QuestionSelector
+              exams={exams}
+              examId={selectedExamId}
               value={selectedQuestionId}
               onChange={handleQuestionChange}
-              disabled={!selectedExamId}
-              className="question-selector"
-            >
-              <option value="">请选择题目</option>
-              {exams.find(exam => exam.id === selectedExamId)?.questions.map(question => (
-                <option key={question.id} value={question.id}>
-                  {question.id} - {question.prompt.substring(0, 50)}...
-                </option>
-              ))}
-            </select>
+            />
           </>
         )}
       </div>
 
       {currentQuestion && (
-        <div className="question-info">
-          <h3>题目要求（{currentQuestion.id}）</h3>
-          <p className="prompt">{currentQuestion.prompt}</p>
-          <div className="requirement-box">
-            <p>总分：{currentQuestion.total_marks} 分</p>
-            <button 
-              onClick={() => setShowFullScheme(!showFullScheme)}
-              className="toggle-btn"
-            >
-              {showFullScheme ? '收起完整评分标准' : '展开完整评分标准'}
-            </button>
-            {showFullScheme && (
-              <pre className="full-mark-scheme">
-                {currentQuestion.fullMarkScheme}
-              </pre>
-            )}
-          </div>
-        </div>
+        <QuestionDetails
+          question={currentQuestion}
+          showFullScheme={showFullScheme}
+          onToggle={() => setShowFullScheme(!showFullScheme)}
+        />
       )}
 
       <textarea
@@ -147,22 +105,40 @@ function App() {
         placeholder="在此输入您的经济学论文..."
         disabled={!currentQuestion}
       />
-      
-      <button 
-        onClick={handleSubmit} 
-        disabled={loading || !currentQuestion}
+
+      <button
+        onClick={handleSubmit}
+        disabled={!currentQuestion}
         className="submit-btn"
       >
-        {loading ? '评分中...' : '提交评分'}
+        提交评分
       </button>
-      
-      {result && (
-        <pre className="result">
-          {result}
-        </pre>
-      )}
+
+      <ResultDisplay result={result} />
     </div>
   );
-}
+};
+
+// 主路由组件
+const AppRouter = () => (
+  <Router>
+    <nav className="main-nav">
+      <Link to="/" className="nav-link">作文评分</Link>
+      <Link to="/knowledge" className="nav-link">知识点问答</Link>
+    </nav>
+    
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/knowledge" element={<KnowledgePage />} />
+    </Routes>
+  </Router>
+);
+
+// 顶层App组件
+const App = () => (
+  <ExamProvider>
+    <AppRouter />
+  </ExamProvider>
+);
 
 export default App;
