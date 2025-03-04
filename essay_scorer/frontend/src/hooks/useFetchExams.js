@@ -9,7 +9,7 @@ const useFetchExams = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/api/exams');
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/exams`);
         const formatted = response.data.map(exam => ({
           ...exam,
           questions: exam.questions.map(q => ({

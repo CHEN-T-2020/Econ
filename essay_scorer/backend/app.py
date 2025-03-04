@@ -26,7 +26,7 @@ def index():
 
 @app.route('/<path:path>')
 def catch_all(path):
-    return app.send_static_file('index.html')
+    return app.send_static_file('index.html') # ?????
 
 
 @app.route('/api/exams', methods=['GET'])

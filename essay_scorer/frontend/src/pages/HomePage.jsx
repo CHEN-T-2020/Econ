@@ -6,7 +6,7 @@ import ExamSelector from '../components/ExamSelector';
 import QuestionSelector from '../components/QuestionSelector';
 import QuestionDetails from '../components/QuestionDetails';
 import ResultDisplay from '../components/ResultDisplay';
-// import './HomePage.css'; // 可选：样式文件
+
 
 const HomePage = () => {
   const { exams, loading, error } = useFetchExams();
@@ -44,7 +44,7 @@ const HomePage = () => {
       return;
     }
     try {
-      const response = await axios.post('http://localhost:3001/api/grade', {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/grade`, {
         essay,
         examId: selectedExamId,
         questionId: selectedQuestionId,

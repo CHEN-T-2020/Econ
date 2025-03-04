@@ -15,7 +15,7 @@ const KnowledgePage = () => {
   useEffect(() => {
     const fetchConcepts = async () => {
       try {
-        const res = await axios.get('http://localhost:3001/api/knowledge');
+        const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/knowledge`);
         setConcepts(res.data);
       } catch (error) {
         console.error('加载知识点失败:', error);
@@ -58,7 +58,7 @@ const KnowledgePage = () => {
 
     setIsLoading(true);
     try {
-      const response = await axios.post('http://localhost:3001/api/explain', payload);
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/explain`, payload);
       setConversation([
         { type: 'response', content: response.data}
       ]);
@@ -77,7 +77,7 @@ const KnowledgePage = () => {
 
     setIsLoading(true);
     try {
-      const response = await axios.post('http://localhost:3001/api/ask', {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/ask`, {
         question,
         context: conversation
       });
