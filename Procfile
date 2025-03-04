@@ -1,1 +1,1 @@
-web: gunicorn essay_scorer.backend.app:app
+web: gunicorn --config gunicorn_config.py essay_scorer.backend.app:app
