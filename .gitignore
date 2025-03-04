@@ -1,4 +1,4 @@
-/essay_scorer/papers/
+papers/
 
 /essay_scorer/backend/venv
 /essay_scorer/backend/.env
