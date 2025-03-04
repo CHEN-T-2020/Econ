@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 current_dir = os.path.dirname(os.path.abspath(__file__))
+static_folder = os.path.join(current_dir, '..', 'frontend', 'build')
 
 # 加载考试题目数据
 data_file_path = os.path.join(current_dir, 'data', 'combined_papers.json')
@@ -15,15 +16,17 @@ with open(data_file_path, 'r', encoding='utf-8') as f:
     EXAM_DATA = json.load(f)
 
 
-app = Flask(__name__, static_folder='../frontend/build', static_url_path='/')
+app = Flask(__name__, static_folder=static_folder, static_url_path='/')
 CORS(app)
 
 @app.route('/')
 def index():
-    # return app.send_static_file('index.html')
-    return "Hello Heroku!"
+    return app.send_static_file('index.html')
+    # return "Hello Heroku!"
 
-
+@app.route('/<path:path>')
+def catch_all(path):
+    return app.send_static_file('index.html')
 
 
 @app.route('/api/exams', methods=['GET'])

@@ -15,7 +15,7 @@ essay_scorer/frontend.pnp.js
 essay_scorer/frontend/coverage
 
 # production
-essay_scorer/frontend/build
+# essay_scorer/frontend/build
 
 # misc
 .DS_Store
