@@ -2,18 +2,20 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ConceptSelector from '../components/ConceptSelector';
 import ConversationPanel from '../components/ConversationPanel';
+import ResultDisplay from '../components/ResultDisplay'; // 引入 ResultDisplay
 
 const KnowledgePage = () => {
   const [concepts, setConcepts] = useState([]);
-  const [selectedConcept, setSelectedConcept] = useState('');
+  const [selectedTop, setSelectedTop] = useState('');
+  const [selectedMain, setSelectedMain] = useState('');
+  const [selectedSub, setSelectedSub] = useState('');
   const [conversation, setConversation] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const fetchConcepts = async () => {
       try {
-        const res = await axios.get('http://localhost:3001/api/concepts');
-        // console.log('获取到的知识点数据:', res.data); // 添加调试日志
+        const res = await axios.get('http://localhost:3001/api/knowledge');
         setConcepts(res.data);
       } catch (error) {
         console.error('加载知识点失败:', error);
@@ -22,14 +24,43 @@ const KnowledgePage = () => {
     fetchConcepts();
   }, []);
 
+  // 顶层选择变化时，清空下级选择
+  const handleTopChange = (value) => {
+    setSelectedTop(value);
+    setSelectedMain('');
+    setSelectedSub('');
+  };
+
+  const handleMainChange = (value) => {
+    setSelectedMain(value);
+    setSelectedSub('');
+  };
+
+  const handleSubChange = (value) => {
+    setSelectedSub(value);
+  };
+
   const handleConceptSelect = async () => {
-    if (!selectedConcept) return;
+    if (!selectedSub) return;
     
+    // 从知识树中找到对应的选择项
+    const topConcept = concepts.find(concept => concept.id === selectedTop);
+    const mainTopic = topConcept && topConcept.main_topics.find(topic => topic.id === selectedMain);
+    const subTopic = mainTopic && mainTopic.sub_topics.find(sub => sub.id === selectedSub);
+    
+    // 构造包含每一层 description 的 payload 对象
+    const payload = {
+      top: topConcept ? topConcept.description : '',
+      main: mainTopic ? mainTopic.description : '',
+      sub: subTopic ? subTopic.description : '',
+      explanation: subTopic ? subTopic.explanation : ''
+    };
+
     setIsLoading(true);
     try {
-      const response = await axios.post('http://localhost:3001/api/explain', { concept: selectedConcept });
+      const response = await axios.post('http://localhost:3001/api/explain', payload);
       setConversation([
-        { type: 'response', content: response.data }
+        { type: 'response', content: response.data}
       ]);
     } catch (error) {
       setConversation([{
@@ -70,10 +101,17 @@ const KnowledgePage = () => {
       <h2>经济学知识点问答</h2>
       <ConceptSelector
         concepts={concepts}
-        selectedConcept={selectedConcept}
-        onSelect={setSelectedConcept}
+        selectedTop={selectedTop}
+        selectedMain={selectedMain}
+        selectedSub={selectedSub}
+        onSelectTop={handleTopChange}
+        onSelectMain={handleMainChange}
+        onSelectSub={handleSubChange}
         onExplain={handleConceptSelect}
       />
+      
+
+
       <ConversationPanel
         conversation={conversation}
         isLoading={isLoading}

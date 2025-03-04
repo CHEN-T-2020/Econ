@@ -3,24 +3,23 @@ from flask_cors import CORS
 import dspy
 import os
 import json
+from utils import evaluate_essay, generate_explanation, handle_follow_up_question
 from dotenv import load_dotenv
 
 load_dotenv()
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='../frontend/build', static_url_path='/')
 CORS(app)
+
+@app.route('/')
+def index():
+    return app.send_static_file('index.html')
 
 # 加载考试题目数据
 with open('data/combined_papers.json', 'r', encoding='utf-8') as f:
     EXAM_DATA = json.load(f)
 
-# 配置AI模型
-OPENAI_MODEL = 'openai/gpt-4o'
-OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
-TEMPERATURE = 0.7
 
-lm = dspy.LM(OPENAI_MODEL, api_key=OPENAI_API_KEY, temperature=TEMPERATURE)
-dspy.configure(lm=lm)
 
 @app.route('/api/exams', methods=['GET'])
 def get_exams():
@@ -57,93 +56,49 @@ def grade_essay():
         question_prompt = data.get('questionPrompt', '')
         question_requirement = data.get('questionRequirement', '')
 
-        # 构建专业评分提示
-        evaluation_prompt = f"""【考试信息】
-试卷ID: {exam_id}
-题目ID: {question_id}
 
-【题目要求】
-{question_prompt}
-
-【评分标准】
-{question_requirement}
-
-【学生作文】
-{essay}
-"""
-
-        return evaluation_prompt
+        return evaluate_essay(question=question_prompt, answer=essay, ms=question_requirement)
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
 
 
-# 添加在现有路由之后
-
-CONCEPTS = [
-    "机会成本",
-    "边际效用递减规律",
-    "市场失灵",
-    "比较优势理论",
-    "菲利普斯曲线",
-    "供需定律",
-    "GDP计算",
-    "通货膨胀",
-    "货币政策"
-]
-
-@app.route('/api/concepts', methods=['GET'])
-def get_concepts():
-    return jsonify(CONCEPTS)
 
 @app.route('/api/explain', methods=['POST'])
 def explain_concept():
     data = request.json
-    concept = data.get('concept', '')
-    
-    prompt = f"""作为经济学教授，请用中文解释以下概念：
-概念名称：{concept}
-
-要求：
-1. 给出精确定义（100字内）
-2. 提供1-2个现实案例
-3. 说明其经济意义
-4. 使用Markdown格式
-5. 包含相关公式（使用LaTeX）"""
+    # data example:
+    # {'top': 'The price system and the microeconomy (A Level)', 'main': 'Efficiency and market failure', 'sub': 'Pareto optimality', 'explanation': 'Pareto optimality occurs when no one can be made better off without making someone else worse off, a key concept in welfare economics.'}
 
     try:
-        # response = lm(prompt)
-        return prompt
+        response = generate_explanation(data)
+        return response
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
 @app.route('/api/ask', methods=['POST'])
 def handle_question():
     data = request.json
-    question = data.get('question', '')
-    context = data.get('context', [])
-    
-    history = "\n".join([f"{msg['type']}: {msg['content']}" for msg in context[-3:]])
-    
-    prompt = f"""根据对话历史回答后续问题：
-{history}
+    handle_follow_up_question(data)
 
-当前问题：{question}
-
-要求：
-1. 保持专业性和易懂性的平衡
-2. 使用中文回复
-3. 包含必要的数学公式（LaTeX格式）
-4. 使用Markdown排版
-5. 如果问题不明确，请求澄清"""
 
     try:
-        # response = lm(prompt)
-        return prompt
+        response = handle_follow_up_question(data)
+        print(response)
+        return response
     except Exception as e:
         return jsonify({"error": str(e)}), 500
     
 
+
+# app.py 新增路由
+@app.route('/api/knowledge', methods=['GET'])
+def get_knowledge():
+    try:
+        with open('data/knowledge_map.json', 'r', encoding='utf-8') as f:
+            return jsonify(json.load(f))
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 
 if __name__ == '__main__':

@@ -1,0 +1,39 @@
+.concept-selector-container {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .concept-selector {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 350px; /* 增加宽度 */
+  }
+  
+  .concept-select, .explain-btn {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .explain-btn {
+    cursor: pointer;
+  }
+  
+  .explain-btn:disabled {
+    cursor: not-allowed;
+  }
+  
+  .explanation-box {
+    margin-left: 20px;
+    padding: 15px;
+    width: 400px; /* 让右侧和左侧对齐 */
+    min-height: 120px;
+    max-height: 230px; /* 设定最大高度，防止过长 */
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    overflow-y: auto; /* 过长时可滚动 */
+    white-space: pre-wrap; /* 让长文本自动换行 */
+    word-wrap: break-word;
+  }
+  

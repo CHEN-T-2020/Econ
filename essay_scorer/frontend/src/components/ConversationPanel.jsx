@@ -32,7 +32,8 @@ const ConversationPanel = ({ conversation, isLoading, onFollowUp }) => {
               remarkPlugins={[remarkGfm]}
               rehypePlugins={[rehypeKatex]}
             >
-              {msg.content}
+              {/* Ensure that the content is a string to avoid React errors */}
+              {typeof msg.content === 'string' ? msg.content : ''}
             </ReactMarkdown>
           </div>
         ))}

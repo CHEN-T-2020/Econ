@@ -9,6 +9,9 @@ export const ExamProvider = ({ children }) => {
   const [essay, setEssay] = useState('');
   const [result, setResult] = useState('');
   const [showFullScheme, setShowFullScheme] = useState(false);
+  const [appMode, setAppMode] = useState('exam');
+  const [knowledge, setKnowledge] = useState([]);
+  const [selectedTopic, setSelectedTopic] = useState(null);
 
   return (
     <ExamContext.Provider
@@ -24,7 +27,14 @@ export const ExamProvider = ({ children }) => {
         result,
         setResult,
         showFullScheme,
-        setShowFullScheme
+        setShowFullScheme,
+        
+        appMode,
+        setAppMode,
+        knowledge,
+        setKnowledge,
+        selectedTopic,
+        setSelectedTopic
       }}
     >
       {children}
