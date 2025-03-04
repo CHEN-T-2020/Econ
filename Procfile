@@ -1,1 +1,1 @@
-web: gunicorn backend.app:app
+web: gunicorn essay_scorer.backend.app:app
