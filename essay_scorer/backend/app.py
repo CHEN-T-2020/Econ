@@ -4,6 +4,7 @@ import dspy
 import os
 import json
 from .utils import evaluate_essay, generate_explanation, handle_follow_up_question
+# from utils import evaluate_essay, generate_explanation, handle_follow_up_question # for local testing
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -110,5 +111,5 @@ def get_knowledge():
 
 
 if __name__ == '__main__':
-    # app.run(port=3001)
+    # app.run(port=3001) # for local testing
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
