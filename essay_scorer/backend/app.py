@@ -3,7 +3,7 @@ from flask_cors import CORS
 import dspy
 import os
 import json
-from utils import evaluate_essay, generate_explanation, handle_follow_up_question
+from .utils import evaluate_essay, generate_explanation, handle_follow_up_question
 from dotenv import load_dotenv
 
 load_dotenv()
