@@ -25,9 +25,9 @@ def index():
     return app.send_static_file('index.html')
     # return "Hello Heroku!"
 
-@app.route('/<path:path>')
-def catch_all(path):
-    return app.send_static_file('index.html') # ?????
+# @app.route('/<path:path>')
+# def catch_all(path):
+#     return app.send_static_file('index.html') # ?????
 
 
 @app.route('/api/exams', methods=['GET'])
@@ -52,6 +52,19 @@ def get_exams():
         return jsonify(formatted_data)
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+    
+
+# app.py 新增路由
+@app.route('/api/knowledge', methods=['GET'])
+def get_knowledge():
+    knowledge_file_path = os.path.join(current_dir, 'data', 'knowledge_map.json')
+    try:
+        with open(knowledge_file_path, 'r', encoding='utf-8') as f:
+            return jsonify(json.load(f))
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+    
+
 
 @app.route('/api/grade', methods=['POST'])
 def grade_essay():
@@ -88,8 +101,6 @@ def explain_concept():
 @app.route('/api/ask', methods=['POST'])
 def handle_question():
     data = request.json
-    handle_follow_up_question(data)
-
 
     try:
         response = handle_follow_up_question(data)
@@ -100,14 +111,7 @@ def handle_question():
     
 
 
-# app.py 新增路由
-@app.route('/api/knowledge', methods=['GET'])
-def get_knowledge():
-    try:
-        with open('data/knowledge_map.json', 'r', encoding='utf-8') as f:
-            return jsonify(json.load(f))
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
+
 
 
 if __name__ == '__main__':

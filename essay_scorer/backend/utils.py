@@ -60,7 +60,8 @@ And please provide the whole evaluation both in English and Chinese.
 """
     # print(prompt)
 
-    return lm(prompt)[0]
+    # return lm(prompt)[0]
+    return prompt
 
 
 
