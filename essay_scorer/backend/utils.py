@@ -16,7 +16,7 @@ DEEP_SEEK_API_KEY = os.getenv('DEEP_SEEK_API_KEY')
 
 TEMPERATURE = 0.7
 
-lm = dspy.LM(DEEP_SEEK_MODEL, api_key=DEEP_SEEK_API_KEY, temperature=TEMPERATURE)
+lm = dspy.LM(OPENAI_MODEL, api_key=OPENAI_API_KEY, temperature=TEMPERATURE)
 dspy.configure(lm=lm)
 
 
