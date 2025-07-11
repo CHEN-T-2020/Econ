@@ -5,7 +5,7 @@ const ExamSelector = ({ exams, value, onChange }) => (
   <select
     value={value}
     onChange={e => onChange(e.target.value)}
-    className="exam-selector"
+    className="form-select"
   >
     <option value="">请选择考试场次</option>
     {exams.map(exam => (

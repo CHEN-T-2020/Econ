@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import './ConceptSelector.css'; // 导入 CSS 文件
 
 const ConceptSelector = ({ 
   concepts, 
@@ -10,7 +9,8 @@ const ConceptSelector = ({
   onSelectTop, 
   onSelectMain, 
   onSelectSub, 
-  onExplain 
+  onExplain,
+  isLoading
 }) => {
   const topConcept = concepts.find(concept => concept.id === selectedTop);
   const mainTopic = topConcept?.main_topics.find(topic => topic.id === selectedMain);
@@ -25,69 +25,88 @@ const ConceptSelector = ({
   };
 
   return (
-    <div className="concept-selector-container">
-      {/* 左侧选择框 */}
-      <div className="concept-selector">
-        <select 
-          value={selectedTop}
-          onChange={(e) => onSelectTop(e.target.value)}
-          className="concept-select"
-        >
-          <option value="">-- 选择知识领域 --</option>
-          {concepts.map(concept => (
-            <option key={concept.id} value={concept.id}>
-              {concept.description}
-            </option>
-          ))}
-        </select>
-
-        {topConcept && (
+    <div className="space-y-4">
+      {/* 选择区域 */}
+      <div className="space-y-3">
+        <div className="form-group">
+          <label className="form-label">知识领域</label>
           <select 
-            value={selectedMain}
-            onChange={(e) => onSelectMain(e.target.value)}
-            className="concept-select"
+            value={selectedTop}
+            onChange={(e) => onSelectTop(e.target.value)}
+            className="form-select"
           >
-            <option value="">-- 选择主要主题 --</option>
-            {topConcept.main_topics.map(topic => (
-              <option key={topic.id} value={topic.id}>
-                {topic.description}
+            <option value="">请选择知识领域</option>
+            {concepts.map(concept => (
+              <option key={concept.id} value={concept.id}>
+                {concept.description}
               </option>
             ))}
           </select>
+        </div>
+
+        {topConcept && (
+          <div className="form-group">
+            <label className="form-label">主要主题</label>
+            <select 
+              value={selectedMain}
+              onChange={(e) => onSelectMain(e.target.value)}
+              className="form-select"
+            >
+              <option value="">请选择主要主题</option>
+              {topConcept.main_topics.map(topic => (
+                <option key={topic.id} value={topic.id}>
+                  {topic.description}
+                </option>
+              ))}
+            </select>
+          </div>
         )}
 
         {mainTopic && (
-          <select 
-            value={selectedSub}
-            onChange={(e) => handleSubSelect(e.target.value)}
-            className="concept-select"
-          >
-            <option value="">-- 选择子主题 --</option>
-            {mainTopic.sub_topics.map(sub => (
-              <option key={sub.id} value={sub.id}>
-                {sub.description}
-              </option>
-            ))}
-          </select>
+          <div className="form-group">
+            <label className="form-label">子主题</label>
+            <select 
+              value={selectedSub}
+              onChange={(e) => handleSubSelect(e.target.value)}
+              className="form-select"
+            >
+              <option value="">请选择子主题</option>
+              {mainTopic.sub_topics.map(sub => (
+                <option key={sub.id} value={sub.id}>
+                  {sub.description}
+                </option>
+              ))}
+            </select>
+          </div>
         )}
 
         <button 
           onClick={onExplain}
-          disabled={!selectedSub}
-          className="explain-btn"
+          disabled={!selectedSub || isLoading}
+          className="btn btn-primary w-full"
         >
-          解释
+          {isLoading ? (
+            <>
+              <span className="loader"></span>
+              正在生成解释...
+            </>
+          ) : (
+            <>
+              🎯 获取AI解释
+            </>
+          )}
         </button>
       </div>
 
-      {/* 右侧解释框 */}
-      <div className="explanation-box">
-        {selectedExplanation ? (
-          <p>{selectedExplanation}</p>
-        ) : (
-          <p>请选择子主题查看解释</p>
-        )}
-      </div>
+      {/* 解释预览 */}
+      {selectedExplanation && (
+        <div className="bg-secondary p-4 rounded-lg">
+          <h4 className="font-semibold mb-2">概念解释预览：</h4>
+          <p className="text-sm leading-relaxed">
+            {selectedExplanation}
+          </p>
+        </div>
+      )}
     </div>
   );
 };
@@ -101,6 +120,7 @@ ConceptSelector.propTypes = {
   onSelectMain: PropTypes.func.isRequired,
   onSelectSub: PropTypes.func.isRequired,
   onExplain: PropTypes.func.isRequired,
+  isLoading: PropTypes.bool
 };
 
 export default ConceptSelector;

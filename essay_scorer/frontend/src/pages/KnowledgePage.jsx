@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ConceptSelector from '../components/ConceptSelector';
 import ConversationPanel from '../components/ConversationPanel';
-import ResultDisplay from '../components/ResultDisplay'; // 引入 ResultDisplay
 
 const KnowledgePage = () => {
   const [concepts, setConcepts] = useState([]);
@@ -11,14 +10,17 @@ const KnowledgePage = () => {
   const [selectedSub, setSelectedSub] = useState('');
   const [conversation, setConversation] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
 
   useEffect(() => {
     const fetchConcepts = async () => {
       try {
+        setError('');
         const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/knowledge`);
         setConcepts(res.data);
       } catch (error) {
         console.error('加载知识点失败:', error);
+        setError('加载知识点失败，请稍后重试');
       }
     };
     fetchConcepts();
@@ -60,7 +62,7 @@ const KnowledgePage = () => {
     try {
       const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/explain`, payload);
       setConversation([
-        { type: 'response', content: response.data}
+        { type: 'response', content: response.data.result || response.data}
       ]);
     } catch (error) {
       setConversation([{
@@ -84,7 +86,7 @@ const KnowledgePage = () => {
       setConversation(prev => [
         ...prev,
         { type: 'request', content: question },
-        { type: 'response', content: response.data }
+        { type: 'response', content: response.data.result || response.data }
       ]);
     } catch (error) {
       setConversation(prev => [
@@ -97,26 +99,59 @@ const KnowledgePage = () => {
   };
 
   return (
-    <div className="knowledge-page">
-      <h2>经济学知识点问答</h2>
-      <ConceptSelector
-        concepts={concepts}
-        selectedTop={selectedTop}
-        selectedMain={selectedMain}
-        selectedSub={selectedSub}
-        onSelectTop={handleTopChange}
-        onSelectMain={handleMainChange}
-        onSelectSub={handleSubChange}
-        onExplain={handleConceptSelect}
-      />
-      
+    <div className="container">
+      {/* 页面标题 */}
+      <div className="text-center mb-4">
+        <h1 className="text-4xl font-bold text-primary mb-2">
+          📚 经济学知识点问答
+        </h1>
+        <p className="text-secondary text-lg">
+          智能AI助手，为您解答经济学概念和问题
+        </p>
+      </div>
 
+      {error && (
+        <div className="error-banner mb-4">
+          <span>⚠️</span>
+          {error}
+        </div>
+      )}
 
-      <ConversationPanel
-        conversation={conversation}
-        isLoading={isLoading}
-        onFollowUp={handleFollowUp}
-      />
+      <div className="grid grid-2 gap-6">
+        {/* 左侧：概念选择 */}
+        <div className="card">
+          <div className="card-header">
+            <h2 className="card-title">🎯 选择知识点</h2>
+          </div>
+          <div className="card-body">
+            <ConceptSelector
+              concepts={concepts}
+              selectedTop={selectedTop}
+              selectedMain={selectedMain}
+              selectedSub={selectedSub}
+              onSelectTop={handleTopChange}
+              onSelectMain={handleMainChange}
+              onSelectSub={handleSubChange}
+              onExplain={handleConceptSelect}
+              isLoading={isLoading}
+            />
+          </div>
+        </div>
+
+        {/* 右侧：对话面板 */}
+        <div className="card">
+          <div className="card-header">
+            <h2 className="card-title">💬 AI助手对话</h2>
+          </div>
+          <div className="card-body">
+            <ConversationPanel
+              conversation={conversation}
+              isLoading={isLoading}
+              onFollowUp={handleFollowUp}
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

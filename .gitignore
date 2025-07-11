@@ -1,29 +1,28 @@
-papers/
+# 数据与实验
+essay_scorer/experiments/*.csv
+essay_scorer/experiments/.env
 
-/essay_scorer/backend/venv
-/essay_scorer/backend/.env
+# 后端环境与缓存
+essay_scorer/backend/.env
+essay_scorer/backend/__pycache__/
 
+# 前端依赖与构建产物
+essay_scorer/frontend/node_modules/
+essay_scorer/frontend/build/
+essay_scorer/frontend/.env*
+essay_scorer/frontend/.DS_Store
 
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-essay_scorer/frontend/node_modules
-essay_scorer/frontend/.pnp
-essay_scorer/frontend.pnp.js
-
-# testing
-essay_scorer/frontend/coverage
-
-# production
-# essay_scorer/frontend/build
-
-# misc
+# 通用缓存与系统文件
 .DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+__pycache__/
+*.py[cod]
+*.ipynb_checkpoints
+env/
+.venv/
 
+# 日志
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# 保留示例环境变量文件（如 .env.example 不忽略）
