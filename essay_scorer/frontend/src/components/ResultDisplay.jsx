@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 const ResultDisplay = ({ result }) => {
   if (!result) return null;
@@ -28,10 +30,12 @@ const ResultDisplay = ({ result }) => {
         </p>
       </div>
       
-      <div className="bg-white border rounded-lg p-4">
-        <pre className="whitespace-pre-wrap text-sm leading-relaxed overflow-auto max-h-96">
-          {resultText}
-        </pre>
+      <div className="bg-white border rounded-lg p-4" style={{maxHeight: '400px', overflow: 'auto'}}>
+        <ReactMarkdown
+          children={resultText}
+          remarkPlugins={[remarkGfm]}
+          className="text-sm leading-relaxed whitespace-pre-wrap"
+        />
       </div>
     </div>
   );

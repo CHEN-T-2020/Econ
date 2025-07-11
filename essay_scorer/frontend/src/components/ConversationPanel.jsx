@@ -39,7 +39,7 @@ const ConversationPanel = ({ conversation, isLoading, onFollowUp }) => {
           <div key={index} className={`flex ${msg.type === 'request' ? 'justify-end' : 'justify-start'}`}>
             <div className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${
               msg.type === 'request' 
-                ? 'bg-primary text-white' 
+                ? 'bg-primary text-primary' 
                 : msg.type === 'error'
                 ? 'bg-red-100 text-red-800 border border-red-200'
                 : 'bg-secondary border border-border-color'

@@ -9,12 +9,13 @@ const QuestionSelector = ({ exams, examId, value, onChange }) => {
       value={value}
       onChange={e => onChange(e.target.value)}
       disabled={!examId}
-      className="form-select"
+      className="form-select question-select"
+      style={{ minWidth: '420px', fontSize: '1rem', lineHeight: '1.5', padding: '0.75rem 1rem' }}
     >
       <option value="">请选择题目</option>
       {currentExam?.questions.map(question => (
-        <option key={question.id} value={question.id}>
-          {question.id} - {question.question.substring(0, 80)}...
+        <option key={question.id} value={question.id} title={question.question} style={{whiteSpace: 'normal'}}>
+          {question.id} - {question.question}
         </option>
       ))}
     </select>

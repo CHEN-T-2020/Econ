@@ -7,7 +7,7 @@ const QuestionDetails = ({ question, showFullScheme, onToggle }) => (
       <h3 className="text-lg font-semibold mb-2">
         题目要求（{question.id}）
       </h3>
-      <p className="text-primary leading-relaxed">
+      <p className="text-primary leading-relaxed" style={{fontSize: '1.1rem', maxWidth: '900px', wordBreak: 'break-word'}}>
         {question.question}
       </p>
     </div>
@@ -26,9 +26,9 @@ const QuestionDetails = ({ question, showFullScheme, onToggle }) => (
       </div>
       
       {showFullScheme && (
-        <div className="mt-3 p-3 bg-white rounded border">
+        <div className="mt-3 p-3 bg-white rounded border" style={{maxHeight: '320px', overflow: 'auto'}}>
           <h4 className="font-medium mb-2">完整评分标准：</h4>
-          <pre className="text-sm leading-relaxed whitespace-pre-wrap overflow-auto max-h-96">
+          <pre className="text-sm leading-relaxed whitespace-pre-wrap" style={{whiteSpace: 'pre-wrap', wordBreak: 'break-all'}}>
             {question.mark_scheme}
           </pre>
         </div>
